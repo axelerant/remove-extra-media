@@ -2,9 +2,9 @@
 # This file is distributed under the same license as the Remove Extra Media package.
 msgid ""
 msgstr ""
-"Project-Id-Version: Remove Extra Media 0.0.1\n"
+"Project-Id-Version: Remove Extra Media 1.0.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tag/remove-extra-media\n"
-"POT-Creation-Date: 2013-09-22 03:03:43+00:00\n"
+"POT-Creation-Date: 2013-09-22 05:27:58+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -17,7 +17,7 @@ msgstr ""
 msgid "Remove Extra Media Settings"
 msgstr ""
 
-#. #-#-#-#-#  remove-extra-media.pot (Remove Extra Media 0.0.1)  #-#-#-#-#
+#. #-#-#-#-#  remove-extra-media.pot (Remove Extra Media 1.0.0)  #-#-#-#-#
 #. Plugin Name of the plugin/theme
 #: lib/class-remove-extra-media-settings.php:83
 msgid "Remove Extra Media"
@@ -191,7 +191,7 @@ msgstr ""
 msgid "All done. No posts needing processing found."
 msgstr ""
 
-#. #-#-#-#-#  remove-extra-media.pot (Remove Extra Media 0.0.1)  #-#-#-#-#
+#. #-#-#-#-#  remove-extra-media.pot (Remove Extra Media 1.0.0)  #-#-#-#-#
 #. Description of the plugin/theme
 #: remove-extra-media.php:252
 msgid ""
@@ -279,18 +279,23 @@ msgid "Failed Processing: %s is incorrect post type."
 msgstr ""
 
 #: remove-extra-media.php:436
-msgid ""
-"&quot;<a href=\"%1$s\" target=\"_blank\">%2$s</a>&quot; Post ID %3$s was "
-"successfully processed in %4$s seconds. %5$d media extras removed."
+msgid "No"
 msgstr ""
 
-#: remove-extra-media.php:479
+#: remove-extra-media.php:438
+msgid ""
+"&quot;<a href=\"%1$s\" target=\"_blank\">%2$s</a>&quot; Post ID %3$s was "
+"successfully processed in %4$s seconds. <strong>%5$s</strong> extra media "
+"removed."
+msgstr ""
+
+#: remove-extra-media.php:489
 msgid ""
 "If your Remove Extra Media display has gone to funky town, please <a href="
 "\"%s\">read the FAQ</a> about possible CSS fixes."
 msgstr ""
 
-#: remove-extra-media.php:488
+#: remove-extra-media.php:498
 msgid ""
 "Please donate $2 towards development and support of this Remove Extra Media "
 "plugin. %s"

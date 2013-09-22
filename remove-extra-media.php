@@ -433,7 +433,7 @@ EOD;
 
 		$count_removed = $this->do_remove_extra_media( $this->post_id, $post );
 		if ( empty( $count_removed ) )
-			$count_removed = __( 'No' );
+			$count_removed = __( 'No', 'remove-extra-media' );
 
 		die( json_encode( array( 'success' => sprintf( __( '&quot;<a href="%1$s" target="_blank">%2$s</a>&quot; Post ID %3$s was successfully processed in %4$s seconds. <strong>%5$s</strong> extra media removed.', 'remove-extra-media' ), get_permalink( $this->post_id ), esc_html( get_the_title( $this->post_id ) ), $this->post_id, timer_stop(), $count_removed ) ) ) );
 	}
