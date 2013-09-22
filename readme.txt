@@ -17,6 +17,8 @@ Use this tool to remove extra media attachments from your selected post types.
 
 In my use case, my testimonials widgets post types in some cases, for whatever reason, had up to 7 extra media attachments related to them. I wanted a quick way to clear those excess out. Considering that the only image or media attachment a testimonial should have was the featured, I simply removed all the others.
 
+This tool works by removing the attachment relationship as this saves the media file in case it's used by other attachments. Using `wp_delete_attachment` would delete the media file, which is something to avoid.
+
 = Primary Features =
 
 * API
