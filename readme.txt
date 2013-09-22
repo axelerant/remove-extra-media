@@ -4,8 +4,8 @@ Contributors: comprock
 Donate link: http://aihr.us/about-aihrus/donate/
 Tags: remove, media, posts
 Requires at least: 3.5
-Tested up to: 3.6.0
-Stable tag: 0.0.1
+Tested up to: 3.6.1
+Stable tag: 1.0.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -88,7 +88,7 @@ See [Changelog](https://github.com/michael-cannon/remove-extra-media/blob/master
 
 == Upgrade Notice ==
 
-= 0.0.1 =
+= 1.0.0 =
 
 * Initial release
 
