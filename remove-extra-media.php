@@ -431,7 +431,7 @@ EOD;
 		if ( ! $post || ! in_array( $post->post_type, self::$post_types )  )
 			die( json_encode( array( 'error' => sprintf( esc_html__( 'Failed Processing: %s is incorrect post type.', 'remove-extra-media' ), esc_html( $this->post_id ) ) ) ) );
 
-		$count_removed = $this->do_something( $this->post_id, $post );
+		$count_removed = $this->remove_extra_media( $this->post_id, $post );
 
 		die( json_encode( array( 'success' => sprintf( __( '&quot;<a href="%1$s" target="_blank">%2$s</a>&quot; Post ID %3$s was successfully processed in %4$s seconds. %5$d media extras removed.', 'remove-extra-media' ), get_permalink( $this->post_id ), esc_html( get_the_title( $this->post_id ) ), $this->post_id, timer_stop(), $count_removed ) ) ) );
 	}
@@ -442,10 +442,11 @@ EOD;
 	 *
 	 * @SuppressWarnings(PHPMD.UnusedFormalParameter)
 	 */
-	public function do_something( $post_id, $post ) {
+	public function remove_extra_media( $post_id, $post ) {
 		global $wpdb;
 
 		$featured_id = get_post_thumbnail_id( $post_id );
+		$media_count = 1;
 		$media_limit = rmem_get_option( 'media_limit' );;
 		$query       = "SELECT ID FROM {$wpdb->posts} WHERE post_type = 'attachment' AND post_parent = {$post_id}";
 
@@ -459,7 +460,6 @@ EOD;
 			array_unshift( $medias, $featured_id );
 		}
 
-		$media_count = 1;
 		foreach( $medias as $media_id ) {
 			// remove media, don't force deletion
 			if ( $media_limit < $media_count )
