@@ -461,9 +461,13 @@ EOD;
 		}
 
 		foreach ( $medias as $media_id ) {
-			// remove media, don't force deletion
-			if ( $media_limit < $media_count )
+			if ( $media_limit < $media_count ) {
+				// remove media, don't force deletion
 				wp_delete_attachment( $media_id, false );
+
+				if ( $featured_id == $media_id )
+					delete_post_meta( $post_id, '_thumbnail_id' );
+			}
 
 			$media_count++;
 		}
