@@ -129,7 +129,7 @@ EOD;
 			return $input;
 
 		$disable_donate = rmem_get_option( 'disable_donate' );
-		if ( $disable_donate ) 
+		if ( $disable_donate )
 			return $input;
 
 		$links = array(
@@ -431,7 +431,7 @@ EOD;
 		if ( ! $post || ! in_array( $post->post_type, self::$post_types )  )
 			die( json_encode( array( 'error' => sprintf( esc_html__( 'Failed Processing: %s is incorrect post type.', 'remove-extra-media' ), esc_html( $this->post_id ) ) ) ) );
 
-		$count_removed = $this->remove_extra_media( $this->post_id, $post );
+		$count_removed = $this->do_remove_extra_media( $this->post_id, $post );
 
 		die( json_encode( array( 'success' => sprintf( __( '&quot;<a href="%1$s" target="_blank">%2$s</a>&quot; Post ID %3$s was successfully processed in %4$s seconds. %5$d media extras removed.', 'remove-extra-media' ), get_permalink( $this->post_id ), esc_html( get_the_title( $this->post_id ) ), $this->post_id, timer_stop(), $count_removed ) ) ) );
 	}
@@ -442,7 +442,7 @@ EOD;
 	 *
 	 * @SuppressWarnings(PHPMD.UnusedFormalParameter)
 	 */
-	public function remove_extra_media( $post_id, $post ) {
+	public function do_remove_extra_media( $post_id, $post ) {
 		global $wpdb;
 
 		$featured_id = get_post_thumbnail_id( $post_id );
@@ -460,7 +460,7 @@ EOD;
 			array_unshift( $medias, $featured_id );
 		}
 
-		foreach( $medias as $media_id ) {
+		foreach ( $medias as $media_id ) {
 			// remove media, don't force deletion
 			if ( $media_limit < $media_count )
 				wp_delete_attachment( $media_id, false );

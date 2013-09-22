@@ -1,10 +1,10 @@
-# Copyright (C) 2013 WordPress Starter
-# This file is distributed under the same license as the WordPress Starter package.
+# Copyright (C) 2013 Remove Extra Media
+# This file is distributed under the same license as the Remove Extra Media package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WordPress Starter 0.0.1\n"
-"Report-Msgid-Bugs-To: http://wordpress.org/tag/wordpress-starter\n"
-"POT-Creation-Date: 2013-09-21 23:41:52+00:00\n"
+"Project-Id-Version: Remove Extra Media 0.0.1\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/remove-extra-media\n"
+"POT-Creation-Date: 2013-09-22 03:03:43+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -12,226 +12,216 @@ msgstr ""
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 
-#: lib/class-wordpress-starter-settings.php:83
-#: lib/class-wordpress-starter-settings.php:315 wordpress-starter.php:73
-msgid "WordPress Starter Settings"
+#: lib/class-remove-extra-media-settings.php:83
+#: lib/class-remove-extra-media-settings.php:323 remove-extra-media.php:73
+msgid "Remove Extra Media Settings"
 msgstr ""
 
-#. #-#-#-#-#  wordpress-starter.pot (WordPress Starter 0.0.1)  #-#-#-#-#
+#. #-#-#-#-#  remove-extra-media.pot (Remove Extra Media 0.0.1)  #-#-#-#-#
 #. Plugin Name of the plugin/theme
-#: lib/class-wordpress-starter-settings.php:83
-msgid "WordPress Starter"
+#: lib/class-remove-extra-media-settings.php:83
+msgid "Remove Extra Media"
 msgstr ""
 
-#: lib/class-wordpress-starter-settings.php:91 wordpress-starter.php:66
-#: wordpress-starter.php:167
-msgid "WordPress Starter Processer"
+#: lib/class-remove-extra-media-settings.php:91 remove-extra-media.php:66
+#: remove-extra-media.php:169
+msgid "Remove Extra Media Processer"
 msgstr ""
 
-#: lib/class-wordpress-starter-settings.php:119
-#: lib/class-wordpress-starter-settings.php:816
+#: lib/class-remove-extra-media-settings.php:119
+#: lib/class-remove-extra-media-settings.php:814
 msgid "General"
 msgstr ""
 
-#: lib/class-wordpress-starter-settings.php:120
+#: lib/class-remove-extra-media-settings.php:120
 msgid "Testing"
 msgstr ""
 
-#: lib/class-wordpress-starter-settings.php:121
+#: lib/class-remove-extra-media-settings.php:121
 msgid "Compatibility & Reset"
 msgstr ""
 
-#: lib/class-wordpress-starter-settings.php:122
-msgid "About WordPress Starter"
+#: lib/class-remove-extra-media-settings.php:122
+msgid "About Remove Extra Media"
 msgstr ""
 
-#: lib/class-wordpress-starter-settings.php:136
-msgid "Enable Paging?"
+#: lib/class-remove-extra-media-settings.php:138
+msgid "Post Type"
 msgstr ""
 
-#: lib/class-wordpress-starter-settings.php:137
-msgid "For `[wps_widget_list]`"
+#: lib/class-remove-extra-media-settings.php:139
+msgid "Post type to remove excess media from."
 msgstr ""
 
-#: lib/class-wordpress-starter-settings.php:140
-msgid "Disable"
+#: lib/class-remove-extra-media-settings.php:146
+msgid "Media Limit"
 msgstr ""
 
-#: lib/class-wordpress-starter-settings.php:141
-msgid "Enable"
+#: lib/class-remove-extra-media-settings.php:147
+msgid ""
+"Number of media items to limit selected post types to. Count includes "
+"featured image."
 msgstr ""
 
-#: lib/class-wordpress-starter-settings.php:142
-msgid "Before wps"
-msgstr ""
-
-#: lib/class-wordpress-starter-settings.php:143
-msgid "After wps"
-msgstr ""
-
-#: lib/class-wordpress-starter-settings.php:150
-msgid "URL slug-name for <a href=\"%1s\">wps archive</a> page."
-msgstr ""
-
-#: lib/class-wordpress-starter-settings.php:156
-msgid "Archive Page URL"
-msgstr ""
-
-#: lib/class-wordpress-starter-settings.php:166
+#: lib/class-remove-extra-media-settings.php:155
 msgid "Debug Mode?"
 msgstr ""
 
-#: lib/class-wordpress-starter-settings.php:167
+#: lib/class-remove-extra-media-settings.php:156
 msgid ""
 "Bypass Ajax controller to handle posts_to_import directly for testing "
 "purposes."
 msgstr ""
 
-#: lib/class-wordpress-starter-settings.php:173
+#: lib/class-remove-extra-media-settings.php:162
 msgid "Posts to Import"
 msgstr ""
 
-#: lib/class-wordpress-starter-settings.php:174
+#: lib/class-remove-extra-media-settings.php:163
 msgid "A CSV list of post ids to import, like '1,2,3'."
 msgstr ""
 
-#: lib/class-wordpress-starter-settings.php:182
+#: lib/class-remove-extra-media-settings.php:171
 msgid "Skip Importing Posts"
 msgstr ""
 
-#: lib/class-wordpress-starter-settings.php:183
+#: lib/class-remove-extra-media-settings.php:172
 msgid "A CSV list of post ids to not import, like '1,2,3'."
 msgstr ""
 
-#: lib/class-wordpress-starter-settings.php:191
+#: lib/class-remove-extra-media-settings.php:180
 msgid "Import Limit"
 msgstr ""
 
-#: lib/class-wordpress-starter-settings.php:192
+#: lib/class-remove-extra-media-settings.php:181
 msgid ""
 "Useful for testing import on a limited amount of posts. 0 or blank means "
 "unlimited."
 msgstr ""
 
-#: lib/class-wordpress-starter-settings.php:207
+#: lib/class-remove-extra-media-settings.php:196
 msgid "Export Settings"
 msgstr ""
 
-#: lib/class-wordpress-starter-settings.php:209
+#: lib/class-remove-extra-media-settings.php:198
 msgid ""
 "These are your current settings in a serialized format. Copy the contents to "
 "make a backup of your settings."
 msgstr ""
 
-#: lib/class-wordpress-starter-settings.php:217
+#: lib/class-remove-extra-media-settings.php:206
 msgid "Import Settings"
 msgstr ""
 
-#: lib/class-wordpress-starter-settings.php:219
+#: lib/class-remove-extra-media-settings.php:208
 msgid ""
 "Paste new serialized settings here to overwrite your current configuration."
 msgstr ""
 
-#: lib/class-wordpress-starter-settings.php:225
+#: lib/class-remove-extra-media-settings.php:214
 msgid "Remove Plugin Data on Deletion?"
 msgstr ""
 
-#: lib/class-wordpress-starter-settings.php:228
+#: lib/class-remove-extra-media-settings.php:217
 msgid ""
-"Delete all WordPress Starter data and options from database on plugin "
+"Delete all Remove Extra Media data and options from database on plugin "
 "deletion"
 msgstr ""
 
-#: lib/class-wordpress-starter-settings.php:234
+#: lib/class-remove-extra-media-settings.php:223
 msgid "Reset to Defaults?"
 msgstr ""
 
-#: lib/class-wordpress-starter-settings.php:237
+#: lib/class-remove-extra-media-settings.php:226
 msgid "Check this box to reset options to their defaults"
 msgstr ""
 
-#: lib/class-wordpress-starter-settings.php:332
+#: lib/class-remove-extra-media-settings.php:340
 msgid "Save Changes"
 msgstr ""
 
-#: lib/class-wordpress-starter-settings.php:341
+#: lib/class-remove-extra-media-settings.php:349
 msgid ""
 "If you like this plugin, please <a href=\"%1$s\" title=\"Donate for Good "
 "Karma\"><img src=\"%2$s\" border=\"0\" alt=\"Donate for Good Karma\" /></a> "
-"or <a href=\"%3$s\" title=\"purchase WordPress Starter Premium\">purchase "
-"WordPress Starter Premium</a> to help fund further development and <a href="
+"or <a href=\"%3$s\" title=\"purchase Remove Extra Media Premium\">purchase "
+"Remove Extra Media Premium</a> to help fund further development and <a href="
 "\"%4$s\" title=\"Support forums\">support</a>."
 msgstr ""
 
-#: lib/class-wordpress-starter-settings.php:352
+#: lib/class-remove-extra-media-settings.php:360
 msgid "Copyright &copy;%1$s <a href=\"%2$s\">Aihrus</a>."
 msgstr ""
 
-#: lib/class-wordpress-starter-settings.php:714
+#: lib/class-remove-extra-media-settings.php:712
 msgid "Required"
 msgstr ""
 
-#: lib/class-wordpress-starter-settings.php:803
+#: lib/class-remove-extra-media-settings.php:801
 msgid "For more information:"
 msgstr ""
 
-#: lib/class-wordpress-starter-settings.php:804
+#: lib/class-remove-extra-media-settings.php:802
 msgid ""
-"These WordPress Starter Settings establish the default option values for "
+"These Remove Extra Media Settings establish the default option values for "
 "shortcodes, theme functions, and widget instances."
 msgstr ""
 
-#: lib/class-wordpress-starter-settings.php:807
-msgid "View the <a href=\"%s\">WordPress Starter documentation</a>."
+#: lib/class-remove-extra-media-settings.php:805
+msgid "View the <a href=\"%s\">Remove Extra Media documentation</a>."
 msgstr ""
 
-#: lib/class-wordpress-starter-settings.php:817
+#: lib/class-remove-extra-media-settings.php:815
 msgid "Show or hide optional fields."
 msgstr ""
 
-#: wordpress-starter.php:61
+#: remove-extra-media.php:61
 msgid "Settings"
 msgstr ""
 
-#: wordpress-starter.php:92
+#: remove-extra-media.php:92
 msgid "Process"
 msgstr ""
 
-#: wordpress-starter.php:159
+#: remove-extra-media.php:161
 msgid "Your user account doesn't have permission to access this."
 msgstr ""
 
-#: wordpress-starter.php:196
+#: remove-extra-media.php:198
 msgid "All done. No posts needing processing found."
 msgstr ""
 
-#: wordpress-starter.php:261
-msgid "Use this tool to process posts for TBD."
-msgstr ""
-
-#: wordpress-starter.php:263
+#. #-#-#-#-#  remove-extra-media.pot (Remove Extra Media 0.0.1)  #-#-#-#-#
+#. Description of the plugin/theme
+#: remove-extra-media.php:252
 msgid ""
-"This processing is not reversible. Backup your database beforehand or be "
-"prepared to revert each transformmed post manually."
+"Use this tool to remove extra media attachments from your selected post "
+"types."
 msgstr ""
 
-#: wordpress-starter.php:265
+#: remove-extra-media.php:254
+msgid ""
+"This processing is not reversible. Backup your database and files beforehand "
+"or be prepared to revert each transformmed post manually."
+msgstr ""
+
+#: remove-extra-media.php:256
 msgid "Please review your %s before proceeding."
 msgstr ""
 
-#: wordpress-starter.php:267
+#: remove-extra-media.php:258
 msgid "To begin, just press the button below."
 msgstr ""
 
-#: wordpress-starter.php:269
-msgid "Process WordPress Starter"
+#: remove-extra-media.php:260
+msgid "Process Remove Extra Media"
 msgstr ""
 
-#: wordpress-starter.php:271 wordpress-starter.php:295
+#: remove-extra-media.php:262 remove-extra-media.php:286
 msgid "You must enable Javascript in order to proceed!"
 msgstr ""
 
-#: wordpress-starter.php:284
+#: remove-extra-media.php:275
 msgid ""
 "Please be patient while this script run. This can take a while, up to a "
 "minute per post. Do not navigate away from this page until this script is "
@@ -239,79 +229,75 @@ msgid ""
 "when the import is completed."
 msgstr ""
 
-#: wordpress-starter.php:286
+#: remove-extra-media.php:277
 msgid "Estimated time required to import is %1$s minutes."
 msgstr ""
 
-#: wordpress-starter.php:288
+#: remove-extra-media.php:279
 msgid "To go back to the previous page, <a href=\"%s\">click here</a>."
 msgstr ""
 
-#: wordpress-starter.php:290
+#: remove-extra-media.php:281
 msgid ""
 "All done! %1$s posts were successfully processed in %2$s seconds and there "
 "were %3$s failures. To try importing the failed posts again, <a href=\"%4$s"
 "\">click here</a>. %5$s"
 msgstr ""
 
-#: wordpress-starter.php:292
+#: remove-extra-media.php:283
 msgid ""
 "All done! %1$s posts were successfully processed in %2$s seconds and there "
 "were no failures. %3$s"
 msgstr ""
 
-#: wordpress-starter.php:301
+#: remove-extra-media.php:292
 msgid "Abort Processing Posts"
 msgstr ""
 
-#: wordpress-starter.php:303
+#: remove-extra-media.php:294
 msgid "Debugging Information"
 msgstr ""
 
-#: wordpress-starter.php:306
+#: remove-extra-media.php:297
 msgid "Total Postss: %s"
 msgstr ""
 
-#: wordpress-starter.php:307
+#: remove-extra-media.php:298
 msgid "Posts Processed: %s"
 msgstr ""
 
-#: wordpress-starter.php:308
+#: remove-extra-media.php:299
 msgid "Process Failures: %s"
 msgstr ""
 
-#: wordpress-starter.php:339
+#: remove-extra-media.php:330
 msgid "Stopping, please wait a moment."
 msgstr ""
 
-#: wordpress-starter.php:441
+#: remove-extra-media.php:432
 msgid "Failed Processing: %s is incorrect post type."
 msgstr ""
 
-#: wordpress-starter.php:445
+#: remove-extra-media.php:436
 msgid ""
 "&quot;<a href=\"%1$s\" target=\"_blank\">%2$s</a>&quot; Post ID %3$s was "
-"successfully processed in %4$s seconds."
+"successfully processed in %4$s seconds. %5$d media extras removed."
 msgstr ""
 
-#: wordpress-starter.php:462
+#: remove-extra-media.php:479
 msgid ""
-"If your WordPress Starter display has gone to funky town, please <a href=\"%s"
-"\">read the FAQ</a> about possible CSS fixes."
+"If your Remove Extra Media display has gone to funky town, please <a href="
+"\"%s\">read the FAQ</a> about possible CSS fixes."
 msgstr ""
 
-#: wordpress-starter.php:471
+#: remove-extra-media.php:488
 msgid ""
-"Please donate $2 towards development and support of this WordPress Starter "
+"Please donate $2 towards development and support of this Remove Extra Media "
 "plugin. %s"
 msgstr ""
 
 #. Plugin URI of the plugin/theme
-msgid "http://wordpress.org/extend/plugins/wordpress-starter/"
-msgstr ""
-
-#. Description of the plugin/theme
-msgid "TBD"
+msgid "http://wordpress.org/extend/plugins/remove-extra-media/"
 msgstr ""
 
 #. Author of the plugin/theme

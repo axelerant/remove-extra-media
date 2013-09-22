@@ -136,15 +136,15 @@ class Remove_Extra_Media_Settings {
 
 		self::$settings['post_type'] = array(
 			'title' => esc_html__( 'Post Type', 'remove-extra-media' ),
-			'desc' => esc_html__( 'Post type to remove excess media from.' ),
+			'desc' => esc_html__( 'Post type to remove excess media from.', 'remove-extra-media' ),
 			'type' => 'select',
 			'choices' => $choices,
 			'widget' => 0,
 		);
 
 		self::$settings['media_limit'] = array(
-			'title' => esc_html__( 'Media Limit' ),
-			'desc' => esc_html__( 'Number of media items to limit selected post types to. Count includes featured image.' ),
+			'title' => esc_html__( 'Media Limit', 'remove-extra-media' ),
+			'desc' => esc_html__( 'Number of media items to limit selected post types to. Count includes featured image.', 'remove-extra-media' ),
 			'std' => 1,
 			'validate' => 'absint',
 		);
