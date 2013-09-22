@@ -19,10 +19,12 @@ In my use case, my testimonials widgets post types in some cases, for whatever r
 
 = Primary Features =
 
-* Ajax based processing screen
 * API
+* Ajax based processing screen
+* Media isn't deleted, only unattached from post type entry
 * Settings export/import
 * Settings screen
+* Variable allowed media count
 
 = Settings Options =
 

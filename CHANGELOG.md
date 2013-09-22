@@ -1,6 +1,8 @@
 # CHANGELOG Remove Extra Media plugin for WordPress
 
 ## master
+* Move screenshots to SVN assets
+* Revise features
 
 ## 1.0.0
 * Add No text flag
