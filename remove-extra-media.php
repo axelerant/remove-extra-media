@@ -274,7 +274,7 @@ EOD;
 	public function show_status( $count, $posts ) {
 		echo '<p>' . esc_html__( 'Please be patient while this script run. This can take a while, up to a minute per post. Do not navigate away from this page until this script is done or the import will not be completed. You will be notified via this page when the import is completed.', 'remove-extra-media' ) . '</p>';
 
-		echo '<p>' . sprintf( esc_html__( 'Estimated time required to import is %1$s minutes.', 'remove-extra-media' ), ( $count * 1 ) ) . '</p>';
+		echo '<p>' . sprintf( esc_html__( 'Estimated time required to import is %1$s minutes.', 'remove-extra-media' ), ( $count / 12 ) ) . '</p>';
 
 		$text_goback = ( ! empty( $_GET['goback'] ) ) ? sprintf( __( 'To go back to the previous page, <a href="%s">click here</a>.', 'remove-extra-media' ), 'javascript:history.go(-1)' ) : '';
 

@@ -13,4 +13,5 @@
 * Remove featured image meta data
 * Remove post type entry attachment relationship than delete media
 * Remove unused CSS stylesheet
+* Set 5 second per post type entry processing estimate
 * Update description
