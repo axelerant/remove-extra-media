@@ -432,8 +432,10 @@ EOD;
 			die( json_encode( array( 'error' => sprintf( esc_html__( 'Failed Processing: %s is incorrect post type.', 'remove-extra-media' ), esc_html( $this->post_id ) ) ) ) );
 
 		$count_removed = $this->do_remove_extra_media( $this->post_id, $post );
+		if ( empty( $count_removed ) )
+			$count_removed = __( 'No' );
 
-		die( json_encode( array( 'success' => sprintf( __( '&quot;<a href="%1$s" target="_blank">%2$s</a>&quot; Post ID %3$s was successfully processed in %4$s seconds. %5$d media extras removed.', 'remove-extra-media' ), get_permalink( $this->post_id ), esc_html( get_the_title( $this->post_id ) ), $this->post_id, timer_stop(), $count_removed ) ) ) );
+		die( json_encode( array( 'success' => sprintf( __( '&quot;<a href="%1$s" target="_blank">%2$s</a>&quot; Post ID %3$s was successfully processed in %4$s seconds. <strong>%5$s</strong> extra media removed.', 'remove-extra-media' ), get_permalink( $this->post_id ), esc_html( get_the_title( $this->post_id ) ), $this->post_id, timer_stop(), $count_removed ) ) ) );
 	}
 
 
@@ -450,8 +452,9 @@ EOD;
 		$media_limit = rmem_get_option( 'media_limit' );;
 		$query       = "SELECT ID FROM {$wpdb->posts} WHERE post_type = 'attachment' AND post_parent = {$post_id}";
 
-		$medias = $wpdb->get_col( $query );
-		if ( $media_limit >= count( $medias ) )
+		$medias       = $wpdb->get_col( $query );
+		$count_medias = count( $medias );
+		if ( $media_limit >= $count_medias )
 			return;
 
 		$featured_key = array_search( $featured_id, $medias );
@@ -462,8 +465,11 @@ EOD;
 
 		foreach ( $medias as $media_id ) {
 			if ( $media_limit < $media_count ) {
-				// remove media, don't force deletion
-				wp_delete_attachment( $media_id, false );
+				$args = array(
+					'ID' => $media_id,
+					'post_parent' => 0,
+				);
+				wp_update_post( $args );
 
 				if ( $featured_id == $media_id )
 					delete_post_meta( $post_id, '_thumbnail_id' );
@@ -472,7 +478,7 @@ EOD;
 			$media_count++;
 		}
 
-		$count_removed = $media_count - $media_limit;
+		$count_removed = $count_medias - $media_limit;
 
 		return $count_removed;
 	}
