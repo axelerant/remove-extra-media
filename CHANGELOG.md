@@ -3,6 +3,8 @@
 ## master
 * Move screenshots to SVN assets
 * Revise features
+* Travis ignore WordPress.WhiteSpace.ControlStructureSpacing - false positives
+* https jQuery transport
 
 ## 1.0.0
 * Add No text flag
