@@ -1,8 +1,12 @@
 # CHANGELOG Remove Extra Media plugin for WordPress
 
 ## master
+
+## 1.0.1
+* Change $2 donation request to $5
 * Move screenshots to SVN assets
 * Revise features
+* Simplify `wp_enqueue_style` handling
 * Travis ignore WordPress.WhiteSpace.ControlStructureSpacing - false positives
 * https jQuery transport
 

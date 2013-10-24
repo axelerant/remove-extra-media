@@ -3,7 +3,7 @@
  * Plugin Name: Remove Extra Media
  * Plugin URI: http://wordpress.org/extend/plugins/remove-extra-media/
  * Description: Use this tool to remove extra media attachments from your selected post types.
- * Version: 1.0.0
+ * Version: 1.0.1
  * Author: Michael Cannon
  * Author URI: http://aihr.us/about-aihrus/michael-cannon-resume/
  * License: GPLv2 or later
@@ -26,7 +26,7 @@
 class Remove_Extra_Media {
 	const ID          = 'remove-extra-media';
 	const PLUGIN_FILE = 'remove-extra-media/remove-extra-media.php';
-	const VERSION     = '1.0.0';
+	const VERSION     = '1.0.1';
 
 	private static $base;
 	private static $post_types;
@@ -495,7 +495,7 @@ EOD;
 
 	public function admin_notices_donate() {
 		$content  = '<div class="updated fade"><p>';
-		$content .= sprintf( __( 'Please donate $2 towards development and support of this Remove Extra Media plugin. %s', 'remove-extra-media' ), self::$donate_button );
+		$content .= sprintf( __( 'Please donate $5 towards development and support of this Remove Extra Media plugin. %s', 'remove-extra-media' ), self::$donate_button );
 		$content .= '</p></div>';
 
 		echo $content;
@@ -521,10 +521,12 @@ EOD;
 
 
 	public static function scripts() {
-		wp_enqueue_script( 'jquery' );
+		if ( is_admin() ) {
+			wp_enqueue_script( 'jquery' );
 
-		wp_register_script( 'jquery-ui-progressbar', plugins_url( 'js/jquery.ui.progressbar.js', __FILE__ ), array( 'jquery', 'jquery-ui-core', 'jquery-ui-widget' ), '1.10.3' );
-		wp_enqueue_script( 'jquery-ui-progressbar' );
+			wp_register_script( 'jquery-ui-progressbar', plugins_url( 'js/jquery.ui.progressbar.js', __FILE__ ), array( 'jquery', 'jquery-ui-core', 'jquery-ui-widget' ), '1.10.3' );
+			wp_enqueue_script( 'jquery-ui-progressbar' );
+		}
 	}
 
 
