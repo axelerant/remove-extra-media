@@ -251,7 +251,7 @@ EOD;
 
 	<p><?php _e( 'Use this tool to remove extra media attachments from your selected post types.', 'remove-extra-media' ); ?></p>
 
-	<p><?php _e( 'This processing is not reversible. Backup your database and files beforehand or be prepared to revert each transformmed post manually.', 'remove-extra-media' ); ?></p>
+	<p><?php _e( 'This processing is not reversible. Backup your database and files beforehand or be prepared to revert each transformed post manually.', 'remove-extra-media' ); ?></p>
 
 	<p><?php printf( esc_html__( 'Please review your %s before proceeding.', 'remove-extra-media' ), self::$settings_link ); ?></p>
 

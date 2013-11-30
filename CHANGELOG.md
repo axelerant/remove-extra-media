@@ -1,6 +1,7 @@
 # CHANGELOG Remove Extra Media plugin for WordPress
 
 ## master
+* transformmed > transformed
 
 ## 1.0.1
 * Change $2 donation request to $5
