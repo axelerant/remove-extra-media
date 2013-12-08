@@ -72,7 +72,8 @@ This tool works by removing the attachment relationship as this saves the media 
 
 = Usage =
 
-1. TBD
+1. Configure through WordPress Admin > Settings > Remove Extra Media
+1. Process posts and such via WordPress Admin > Tools > Remove Extra Media
 
 = Upgrading =
 
