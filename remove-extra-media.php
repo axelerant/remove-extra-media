@@ -1,8 +1,8 @@
 <?php
 /**
- * Plugin Name: Remove Extra Media
+ * Plugin Name: Remove Extra Media by Aihrus
  * Plugin URI: http://wordpress.org/extend/plugins/remove-extra-media/
- * Description: Use this tool to remove extra media attachments from your selected post types.
+ * Description: Use Remove Extra Media by Aihrus to remove extra media attachments from your selected post types.
  * Version: 1.0.1
  * Author: Michael Cannon
  * Author URI: http://aihr.us/about-aihrus/michael-cannon-resume/

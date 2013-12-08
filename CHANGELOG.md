@@ -1,6 +1,8 @@
 # CHANGELOG Remove Extra Media plugin for WordPress
 
 ## master
+* Convert TODO to https://github.com/michael-cannon/remove-extra-media/issues
+* Revise readme structure
 * transformmed > transformed
 
 ## 1.0.1

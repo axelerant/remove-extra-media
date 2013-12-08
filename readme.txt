@@ -1,4 +1,4 @@
-=== Remove Extra Media ===
+=== Remove Extra Media by Aihrus ===
 
 Contributors: comprock
 Donate link: http://aihr.us/about-aihrus/donate/
@@ -9,11 +9,11 @@ Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Use this tool to remove extra media attachments from your selected post types.
+Use Remove Extra Media by Aihrus to remove extra media attachments from your selected post types.
 
 == Description ==
 
-Use this tool to remove extra media attachments from your selected post types.
+Use Remove Extra Media [by Aihrus](http://aihr.us/about-aihrus/) to remove extra media attachments from your selected post types.
 
 In my use case, my testimonials widgets post types in some cases, for whatever reason, had up to 7 extra media attachments related to them. I wanted a quick way to clear those excess out. Considering that the only image or media attachment a testimonial should have was the featured, I simply removed all the others.
 
@@ -49,33 +49,57 @@ This tool works by removing the attachment relationship as this saves the media 
 * Remove Plugin Data on Deletion? - Delete all Remove Extra Media data and options from database on plugin deletion
 * Reset to Defaults? – Check this box to reset options to their defaults
 
-= API =
-
-* Read the [Remove Extra Media API](https://github.com/michael-cannon/remove-extra-media/blob/master/API.md).
-
-= Languages =
-
-You can translate this plugin into your own language if it's not done so already. The localization file `remove-extra-media.pot` can be found in the `languages` folder of this plugin. After translation, please [send the localized file](http://aihr.us/contact-aihrus/) to the plugin author.
-
-See the FAQ for further localization tips.
-
-= Support =
-
-Please visit the [Remove Extra Media Knowledge Base](https://aihrus.zendesk.com/categories/20128436-Remove-Extra-Media) for frequently asked questions, offering ideas, or getting support.
-
-If you want to contribute and I hope you do, visit the [Remove Extra Media Github repository](https://github.com/michael-cannon/remove-extra-media).
-
 
 == Installation ==
 
-1. Via WordPress Admin > Plugins > Add New, Upload the `remove-extra-media.zip` file
-1. Alternately, via FTP, upload `remove-extra-media` directory to the `/wp-content/plugins/` directory
-1. Activate the 'Remove Extra Media' plugin after uploading or through WordPress Admin > Plugins
+= Install Methods =
+
+* Through WordPress Admin > Plugins > Add New, Search for "Remove Extra Media"
+	* Find "Remove Extra Media by Aihrus"
+	* Click "Install Now" of "Remove Extra Media by Aihrus"
+* Download [`remove-extra-media.zip`](http://downloads.wordpress.org/plugin/remove-extra-media.zip) locally
+	* Through WordPress Admin > Plugins > Add New
+	* Click Upload
+	* "Choose File" `remove-extra-media.zip`
+	* Click "Install Now"
+* Download and unzip [`remove-extra-media.zip`](http://downloads.wordpress.org/plugin/remove-extra-media.zip) locally
+	* Using FTP, upload directory `remove-extra-media` to your website's `/wp-content/plugins/` directory
+
+= Activatation Options =
+
+* Activate the "Remove Extra Media" plugin after uploading
+* Activate the "Remove Extra Media" plugin through WordPress Admin > Plugins
+
+= Usage =
+
+1. TBD
+
+= Upgrading =
+
+* Through WordPress
+	* Via WordPress Admin > Dashboard > Updates, click "Check Again"
+	* Select plugins for update, click "Update Plugins"
+* Using FTP
+	* Download and unzip [`remove-extra-media.zip`](http://downloads.wordpress.org/plugin/remove-extra-media.zip) locally
+	* FTP, upload directory `remove-extra-media` to your website's `/wp-content/plugins/` directory
+	* Be sure to overwrite your existing `remove-extra-media` folder contents
 
 
 == Frequently Asked Questions ==
 
-Please visit the [Remove Extra Media Knowledge Base](https://aihrus.zendesk.com/categories/20128436-Remove-Extra-Media) for frequently asked questions, offering ideas, or getting support.
+= Most Common Issues =
+
+* Got `Parse error: syntax error, unexpected T_STATIC, expecting ')'`? Read [Most Aihrus Plugins Require PHP 5.3+](https://aihrus.zendesk.com/entries/30678006) for the fixes.
+* [Debug common theme and plugin conflicts](https://aihrus.zendesk.com/entries/25119302)
+* [Change or debug CSS](https://aihrus.zendesk.com/entries/24910733)
+
+= Still Stuck or Want Something Done? Get Support! =
+
+1. [Remove Extra Media Knowledge Base](https://aihrus.zendesk.com/categories/20128436) - read and comment upon frequently asked questions
+1. [Open Remove Extra Media Issues](https://github.com/michael-cannon/remove-extra-media/issues) - review and submit bug reports and enhancement requests
+1. [Remove Extra Media Support on WordPress](http://wordpress.org/support/plugin/remove-extra-media) - ask questions and review responses
+1. [Contribute Code to Remove Extra Media](https://github.com/michael-cannon/remove-extra-media/blob/master/CONTRIBUTING.md)
+1. [Beta Testers Needed](http://aihr.us/become-beta-tester/) - get the latest Remove Extra Media version
 
 
 == Screenshots ==
@@ -83,6 +107,8 @@ Please visit the [Remove Extra Media Knowledge Base](https://aihrus.zendesk.com/
 1. Settings screen
 2. Process screen pre-run
 3. Process screen post-run
+
+[gallery]
 
 
 == Changelog ==
@@ -97,16 +123,18 @@ See [Changelog](https://github.com/michael-cannon/remove-extra-media/blob/master
 * Initial release
 
 
-== Beta Testers Needed ==
+== Notes ==
 
-I really want Remove Extra Media and Remove Extra Media Premium to be the best WordPress plugins of their type. However, it's beyond me to do it alone.
+TBD
 
-I need beta testers to help with ensuring pending releases of Remove Extra Media and Remove Extra Media Premium are solid. This would benefit us all by helping reduce the number of releases and raise code quality.
 
-[Please contact me directly](http://aihr.us/contact-aihrus/).
+== API ==
 
-Beta testers benefit directly with latest versions, a free 1-site license for Remove Extra Media Premium, and personalized support assistance.
+* Read the [Remove Extra Media API](https://github.com/michael-cannon/remove-extra-media/blob/master/API.md).
 
-== TODO ==
 
-See [TODO](https://github.com/michael-cannon/remove-extra-media/blob/master/TODO.md)
+== Localization ==
+
+You can translate this plugin into your own language if it's not done so already. The localization file `remove-extra-media.pot` can be found in the `languages` folder of this plugin. After translation, please [send the localized file](http://aihr.us/contact-aihrus/) for plugin inclusion.
+
+**[How do I localize?](https://aihrus.zendesk.com/entries/23691557)**
