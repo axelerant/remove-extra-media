@@ -52,6 +52,10 @@ This tool works by removing the attachment relationship as this saves the media 
 
 == Installation ==
 
+= Requirements =
+
+* TBD
+
 = Install Methods =
 
 * Through WordPress Admin > Plugins > Add New, Search for "Remove Extra Media"
@@ -65,7 +69,7 @@ This tool works by removing the attachment relationship as this saves the media 
 * Download and unzip [`remove-extra-media.zip`](http://downloads.wordpress.org/plugin/remove-extra-media.zip) locally
 	* Using FTP, upload directory `remove-extra-media` to your website's `/wp-content/plugins/` directory
 
-= Activatation Options =
+= Activation Options =
 
 * Activate the "Remove Extra Media" plugin after uploading
 * Activate the "Remove Extra Media" plugin through WordPress Admin > Plugins

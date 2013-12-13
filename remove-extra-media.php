@@ -116,6 +116,7 @@ EOD;
 		global $wpdb;
 
 		require_once 'lib/class-remove-extra-media-settings.php';
+
 		$delete_data = rmem_get_option( 'delete_data', false );
 		if ( $delete_data ) {
 			delete_option( Remove_Extra_Media_Settings::ID );
