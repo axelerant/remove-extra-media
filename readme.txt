@@ -86,7 +86,7 @@ This tool works by removing the attachment relationship as this saves the media 
 	* Select plugins for update, click "Update Plugins"
 * Using FTP
 	* Download and unzip [`remove-extra-media.zip`](http://downloads.wordpress.org/plugin/remove-extra-media.zip) locally
-	* FTP, upload directory `remove-extra-media` to your website's `/wp-content/plugins/` directory
+	* Upload directory `remove-extra-media` to your website's `/wp-content/plugins/` directory
 	* Be sure to overwrite your existing `remove-extra-media` folder contents
 
 
