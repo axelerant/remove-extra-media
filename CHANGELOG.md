@@ -2,6 +2,7 @@
 
 ## master
 * Convert TODO to https://github.com/michael-cannon/remove-extra-media/issues
+* Convert to static class coding
 * Revise readme structure
 * transformmed > transformed
 

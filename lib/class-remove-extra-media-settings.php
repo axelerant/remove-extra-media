@@ -51,23 +51,23 @@ class Remove_Extra_Media_Settings {
 
 
 	public function __construct() {
-		add_action( 'admin_init', array( $this, 'admin_init' ) );
-		add_action( 'admin_menu', array( $this, 'admin_menu' ) );
-		// add_action( 'init', array( $this, 'init' ) );
+		add_action( 'admin_init', array( __CLASS__, 'admin_init' ) );
+		add_action( 'admin_menu', array( __CLASS__, 'admin_menu' ) );
+		// add_action( 'init', array( __CLASS__, 'init' ) );
 		load_plugin_textdomain( 'remove-extra-media', false, '/remove-extra-media/languages/' );
 	}
 
 
-	public function init() {}
+	public static function init() {}
 
 
-	public function admin_init() {
+	public static function admin_init() {
 		$version       = rmem_get_option( 'version' );
 		self::$version = Remove_Extra_Media::VERSION;
 		self::$version = apply_filters( 'rmem__version', self::$version );
 
 		if ( $version != self::$version )
-			$this->initialize_settings();
+			self::initialize_settings();
 
 		if ( ! self::do_load() )
 			return;
@@ -75,16 +75,16 @@ class Remove_Extra_Media_Settings {
 		self::sections();
 		self::settings();
 
-		$this->register_settings();
+		self::register_settings();
 	}
 
 
-	public function admin_menu() {
+	public static function admin_menu() {
 		self::$admin_page = add_options_page( esc_html__( 'Remove Extra Media Settings', 'remove-extra-media' ), esc_html__( 'Remove Extra Media', 'remove-extra-media' ), 'manage_options', self::ID, array( 'Remove_Extra_Media_Settings', 'display_page' ) );
 
-		add_action( 'admin_print_scripts-' . self::$admin_page, array( $this, 'scripts' ) );
-		add_action( 'admin_print_styles-' . self::$admin_page, array( $this, 'styles' ) );
-		add_action( 'load-' . self::$admin_page, array( $this, 'settings_add_help_tabs' ) );
+		add_action( 'admin_print_scripts-' . self::$admin_page, array( __CLASS__, 'scripts' ) );
+		add_action( 'admin_print_styles-' . self::$admin_page, array( __CLASS__, 'styles' ) );
+		add_action( 'load-' . self::$admin_page, array( __CLASS__, 'settings_add_help_tabs' ) );
 
 		add_screen_meta_link(
 			'wsp_importer_link',
@@ -295,7 +295,7 @@ class Remove_Extra_Media_Settings {
 	 *
 	 * @SuppressWarnings(PHPMD.UnusedLocalVariable)
 	 */
-	public function create_setting( $args = array() ) {
+	public static function create_setting( $args = array() ) {
 		extract( $args );
 
 		if ( preg_match( '#(_expand_begin|_expand_end)#', $id ) )
@@ -313,7 +313,7 @@ class Remove_Extra_Media_Settings {
 
 		self::$defaults[$id] = $std;
 
-		add_settings_field( $id, $title, array( $this, 'display_setting' ), self::ID, $section, $field_args );
+		add_settings_field( $id, $title, array( __CLASS__, 'display_setting' ), self::ID, $section, $field_args );
 	}
 
 
@@ -407,10 +407,10 @@ class Remove_Extra_Media_Settings {
 	}
 
 
-	public function display_section() {}
+	public static function display_section() {}
 
 
-	public function display_about_section() {
+	public static function display_about_section() {
 		echo '
 			<div id="about" style="width: 70%; min-height: 225px;">
 				<p><img class="alignright size-medium" title="Michael in Red Square, Moscow, Russia" src="' . WP_PLUGIN_URL . '/remove-extra-media/media/michael-cannon-red-square-300x2251.jpg" alt="Michael in Red Square, Moscow, Russia" width="300" height="225" /><a href="http://wordpress.org/extend/plugins/remove-extra-media/">Remove Extra Media</a> is by <a href="http://aihr.us/about-aihrus/michael-cannon-resume/">Michael Cannon</a>. He\'s <a title="Lot\'s of stuff about Peichi Liu…" href="http://peimic.com/t/peichi-liu/">Peichi’s</a> smiling man, an adventurous <a title="Water rat" href="http://www.chinesehoroscope.org/chinese_zodiac/rat/" target="_blank">water-rat</a>, <a title="Axelerant – Open Source. Engineered." href="http://axelerant.com/who-we-are">chief people officer</a>, <a title="Aihrus – website support made easy since 1999" href="http://aihr.us/about-aihrus/">chief technology officer</a>, <a title="Road biker, cyclist, biking; whatever you call, I love to ride" href="http://peimic.com/c/biking/">cyclist</a>, <a title="Michael\'s poetic like literary ramblings" href="http://peimic.com/t/poetry/">poet</a>, <a title="World Wide Opportunities on Organic Farms" href="http://peimic.com/t/WWOOF/">WWOOF’er</a> and <a title="My traveled to country list, is more than my age." href="http://peimic.com/c/travel/">world traveler</a>.</p>
@@ -547,7 +547,7 @@ class Remove_Extra_Media_Settings {
 	}
 
 
-	public function initialize_settings() {
+	public static function initialize_settings() {
 		$defaults                 = self::get_defaults( 'backwards' );
 		$current                  = get_option( self::ID );
 		$current                  = wp_parse_args( $current, $defaults );
@@ -558,29 +558,29 @@ class Remove_Extra_Media_Settings {
 	}
 
 
-	public function register_settings() {
-		register_setting( self::ID, self::ID, array( $this, 'validate_settings' ) );
+	public static function register_settings() {
+		register_setting( self::ID, self::ID, array( __CLASS__, 'validate_settings' ) );
 
 		foreach ( self::$sections as $slug => $title ) {
 			if ( $slug == 'about' )
-				add_settings_section( $slug, $title, array( $this, 'display_about_section' ), self::ID );
+				add_settings_section( $slug, $title, array( __CLASS__, 'display_about_section' ), self::ID );
 			else
-				add_settings_section( $slug, $title, array( $this, 'display_section' ), self::ID );
+				add_settings_section( $slug, $title, array( __CLASS__, 'display_section' ), self::ID );
 		}
 
 		foreach ( self::$settings as $id => $setting ) {
 			$setting['id'] = $id;
-			$this->create_setting( $setting );
+			self::create_setting( $setting );
 		}
 	}
 
 
-	public function scripts() {
+	public static function scripts() {
 		wp_enqueue_script( 'jquery-ui-tabs' );
 	}
 
 
-	public function styles() {
+	public static function styles() {
 		wp_enqueue_style( 'jquery-style', '//ajax.googleapis.com/ajax/libs/jqueryui/1.8.2/themes/smoothness/jquery-ui.css' );
 	}
 
@@ -792,7 +792,7 @@ class Remove_Extra_Media_Settings {
 	}
 
 
-	public function settings_add_help_tabs() {
+	public static function settings_add_help_tabs() {
 		$screen = get_current_screen();
 		if ( self::$admin_page != $screen->id )
 			return;
