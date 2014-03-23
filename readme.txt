@@ -143,3 +143,6 @@ TBD
 You can translate this plugin into your own language if it's not done so already. The localization file `remove-extra-media.pot` can be found in the `languages` folder of this plugin. After translation, please [send the localized file](http://aihr.us/contact-aihrus/) for plugin inclusion.
 
 **[How do I localize?](https://aihrus.zendesk.com/entries/23691557)**
+
+* Serbian by [Ognjen Djuraskovic](http://firstsiteguide.com)
+* Spanish by [Ognjen Djuraskovic](http://firstsiteguide.com)

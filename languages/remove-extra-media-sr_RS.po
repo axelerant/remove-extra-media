@@ -1,0 +1,351 @@
+# Copyright (C) 2013 Remove Extra Media
+# This file is distributed under the same license as the Remove Extra Media package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Remove Extra Media 1.0.1\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/remove-extra-media\n"
+"POT-Creation-Date: 2013-10-24 05:07:51+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2014-03-11 13:58+0100\n"
+"Last-Translator: Borisa Djuraskovic <borisad@webhostinghub.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"X-Generator: Poedit 1.5.7\n"
+
+#: lib/class-remove-extra-media-settings.php:83
+#: lib/class-remove-extra-media-settings.php:323 remove-extra-media.php:73
+msgid "Remove Extra Media Settings"
+msgstr "Remove Extra Media postavke"
+
+#. #-#-#-#-#  remove-extra-media.pot (Remove Extra Media 1.0.1)  #-#-#-#-#
+#. Plugin Name of the plugin/theme
+#: lib/class-remove-extra-media-settings.php:83
+msgid "Remove Extra Media"
+msgstr "Remove Extra Media"
+
+#: lib/class-remove-extra-media-settings.php:91 remove-extra-media.php:66
+#: remove-extra-media.php:169
+msgid "Remove Extra Media Processer"
+msgstr "Remove Extra Media procesor"
+
+#: lib/class-remove-extra-media-settings.php:119
+#: lib/class-remove-extra-media-settings.php:814
+msgid "General"
+msgstr "Opšte"
+
+#: lib/class-remove-extra-media-settings.php:120
+msgid "Testing"
+msgstr "Testiranje"
+
+#: lib/class-remove-extra-media-settings.php:121
+msgid "Compatibility & Reset"
+msgstr "Kompatibilnost & Resetovanje"
+
+#: lib/class-remove-extra-media-settings.php:122
+msgid "About Remove Extra Media"
+msgstr "O Remove Extra Media"
+
+#: lib/class-remove-extra-media-settings.php:138
+msgid "Post Type"
+msgstr "Tip posta"
+
+#: lib/class-remove-extra-media-settings.php:139
+msgid "Post type to remove excess media from."
+msgstr "Tip posta za uklanjanje medijaa iz."
+
+#: lib/class-remove-extra-media-settings.php:146
+msgid "Media Limit"
+msgstr "Limit medija"
+
+#: lib/class-remove-extra-media-settings.php:147
+msgid ""
+"Number of media items to limit selected post types to. Count includes "
+"featured image."
+msgstr ""
+"Broj medijskih priloga za ograničavanje izabranih tipova postova u. Brojanje "
+"uključuje sadržanu sliku ."
+
+#: lib/class-remove-extra-media-settings.php:155
+msgid "Debug Mode?"
+msgstr "Debug način?"
+
+#: lib/class-remove-extra-media-settings.php:156
+msgid ""
+"Bypass Ajax controller to handle posts_to_import directly for testing "
+"purposes."
+msgstr ""
+"Bypass Ajax kontroler za rad postova_za_import direktno za  testiranje."
+
+#: lib/class-remove-extra-media-settings.php:162
+msgid "Posts to Import"
+msgstr "Postovi za import"
+
+#: lib/class-remove-extra-media-settings.php:163
+msgid "A CSV list of post ids to import, like '1,2,3'."
+msgstr "CSV lista postova ids za import, kao'1,2,3'."
+
+#: lib/class-remove-extra-media-settings.php:171
+msgid "Skip Importing Posts"
+msgstr "Preskočiti importovanje postova"
+
+#: lib/class-remove-extra-media-settings.php:172
+msgid "A CSV list of post ids to not import, like '1,2,3'."
+msgstr "CSV lista postova ids da se ne imortuje, kao '1,2,3'."
+
+#: lib/class-remove-extra-media-settings.php:180
+msgid "Import Limit"
+msgstr "Limit importovanja"
+
+#: lib/class-remove-extra-media-settings.php:181
+msgid ""
+"Useful for testing import on a limited amount of posts. 0 or blank means "
+"unlimited."
+msgstr ""
+"Korisno za testiranje na limitiranoj količini postova. 0 ili prazno znači "
+"neograničeno."
+
+#: lib/class-remove-extra-media-settings.php:196
+msgid "Export Settings"
+msgstr "Eksportovati postavke"
+
+#: lib/class-remove-extra-media-settings.php:198
+msgid ""
+"These are your current settings in a serialized format. Copy the contents to "
+"make a backup of your settings."
+msgstr ""
+"Ovo su vaše trenutne postavke u seriskom formatu. Kopirajte sadržaj da biste "
+"backup-ovali postavke."
+
+#: lib/class-remove-extra-media-settings.php:206
+msgid "Import Settings"
+msgstr "Uneti postavke"
+
+#: lib/class-remove-extra-media-settings.php:208
+msgid ""
+"Paste new serialized settings here to overwrite your current configuration."
+msgstr ""
+"Uneti nove seriske postavke ovde da biste pisali preko trenutne "
+"konfiguracije."
+
+#: lib/class-remove-extra-media-settings.php:214
+msgid "Remove Plugin Data on Deletion?"
+msgstr "Ukloniti podatke o pluginu prilikom brisanja?"
+
+#: lib/class-remove-extra-media-settings.php:217
+msgid ""
+"Delete all Remove Extra Media data and options from database on plugin "
+"deletion"
+msgstr ""
+"Obrisati sve Remove Extra Media podatke i opcije sa baze podataka pri "
+"brisanju plugina"
+
+#: lib/class-remove-extra-media-settings.php:223
+msgid "Reset to Defaults?"
+msgstr "Resetuj na Default?"
+
+#: lib/class-remove-extra-media-settings.php:226
+msgid "Check this box to reset options to their defaults"
+msgstr "Čekirati ovo da biste resetovali opcije na default"
+
+#: lib/class-remove-extra-media-settings.php:340
+msgid "Save Changes"
+msgstr "Sačuvati promene"
+
+#: lib/class-remove-extra-media-settings.php:349
+msgid ""
+"If you like this plugin, please <a href=\"%1$s\" title=\"Donate for Good "
+"Karma\"><img src=\"%2$s\" border=\"0\" alt=\"Donate for Good Karma\" /></a> "
+"or <a href=\"%3$s\" title=\"purchase Remove Extra Media Premium\">purchase "
+"Remove Extra Media Premium</a> to help fund further development and <a href="
+"\"%4$s\" title=\"Support forums\">support</a>."
+msgstr ""
+"Ako vam se dopada ovaj plugin, molim vas <a href=\"%1$s\" title=\"Donate for "
+"Good Karma\"><img src=\"%2$s\" border=\"0\" alt=\"Donate for Good Karma\" /"
+"></a>   ili<a href=\"%3$s\" title=\"purchase Remove Extra Media Premium"
+"\">purchase Remove Extra Media Premium</a> kupite Remove Extra Media "
+"Premium  da biste podržali i pomogli dalji razvoj <a href=\"%4$s\" title="
+"\"Support forums\">support</a>."
+
+#: lib/class-remove-extra-media-settings.php:360
+msgid "Copyright &copy;%1$s <a href=\"%2$s\">Aihrus</a>."
+msgstr "Copyright &copy;%1$s <a href=\"%2$s\">Aihrus</a>."
+
+#: lib/class-remove-extra-media-settings.php:712
+msgid "Required"
+msgstr "Potrebno"
+
+#: lib/class-remove-extra-media-settings.php:801
+msgid "For more information:"
+msgstr "Za više informacija:"
+
+#: lib/class-remove-extra-media-settings.php:802
+msgid ""
+"These Remove Extra Media Settings establish the default option values for "
+"shortcodes, theme functions, and widget instances."
+msgstr ""
+"Ove Remove Extra Media postavke ustanovile su default opcije vrednosti za "
+"skraćenice, teme funkcija i widget instance."
+
+#: lib/class-remove-extra-media-settings.php:805
+msgid "View the <a href=\"%s\">Remove Extra Media documentation</a>."
+msgstr "Pregledajte<a href=\"%s\"> Remove Extra Media dokumentaciju</a>."
+
+#: lib/class-remove-extra-media-settings.php:815
+msgid "Show or hide optional fields."
+msgstr "Prikazati ili sakriti opcionalna polja."
+
+#: remove-extra-media.php:61
+msgid "Settings"
+msgstr "Postavke"
+
+#: remove-extra-media.php:92
+msgid "Process"
+msgstr "Proces"
+
+#: remove-extra-media.php:161
+msgid "Your user account doesn't have permission to access this."
+msgstr "Vaš korisnik naloga nema dozvolu da pristupi ovde."
+
+#: remove-extra-media.php:198
+msgid "All done. No posts needing processing found."
+msgstr "Gotovo. Nijedan post potreban procesovanja nije pronadjen."
+
+#. #-#-#-#-#  remove-extra-media.pot (Remove Extra Media 1.0.1)  #-#-#-#-#
+#. Description of the plugin/theme
+#: remove-extra-media.php:252
+msgid ""
+"Use this tool to remove extra media attachments from your selected post "
+"types."
+msgstr ""
+"Koristite ovu alatku da biste uklonili ekstra medije dodatak iz izabranih "
+"tipova posta."
+
+#: remove-extra-media.php:254
+msgid ""
+"This processing is not reversible. Backup your database and files beforehand "
+"or be prepared to revert each transformmed post manually."
+msgstr ""
+"Ovaj proces se ne može vratiti. Backup-ujte podatke i fajlove pre ili se "
+"spremite da svaki post transformišete ručno."
+
+#: remove-extra-media.php:256
+msgid "Please review your %s before proceeding."
+msgstr "Pregledajte vaš %s pre procesovanja"
+
+#: remove-extra-media.php:258
+msgid "To begin, just press the button below."
+msgstr "Da biste počeli kliknite na dugme ispod"
+
+#: remove-extra-media.php:260
+msgid "Process Remove Extra Media"
+msgstr "Procesovanje Remove Extra Media"
+
+#: remove-extra-media.php:262 remove-extra-media.php:286
+msgid "You must enable Javascript in order to proceed!"
+msgstr "Morate da omogućite Javascript da biste nastavili!"
+
+#: remove-extra-media.php:275
+msgid ""
+"Please be patient while this script run. This can take a while, up to a "
+"minute per post. Do not navigate away from this page until this script is "
+"done or the import will not be completed. You will be notified via this page "
+"when the import is completed."
+msgstr ""
+"Molimo vas da budete strpljivi dok se ova skripta učitava . To može da "
+"potraje neko vreme , do minut po postu . Nemojte se idete daleko od ove "
+"stranice dok ovo skripta vrši ili unos neće biti završen . Bićete obavešteni "
+"putem ove stranice , kada se unos završi ."
+
+#: remove-extra-media.php:277
+msgid "Estimated time required to import is %1$s minutes."
+msgstr "Vreme potrebno za unos je %1$s minuta."
+
+#: remove-extra-media.php:279
+msgid "To go back to the previous page, <a href=\"%s\">click here</a>."
+msgstr ""
+"Da biste se vratili na prethodnu stranicu<a href=\"%s\"> kliknite ovde</a>."
+
+#: remove-extra-media.php:281
+msgid ""
+"All done! %1$s posts were successfully processed in %2$s seconds and there "
+"were %3$s failures. To try importing the failed posts again, <a href=\"%4$s"
+"\">click here</a>. %5$s"
+msgstr ""
+"Gotovo! %1$s postovo su uspešno procesovani u %2$s sekunde i bilo je %3$s "
+"grešaka. Da pokušate ponovo da unesete postove, kliknite ovde"
+
+#: remove-extra-media.php:283
+msgid ""
+"All done! %1$s posts were successfully processed in %2$s seconds and there "
+"were no failures. %3$s"
+msgstr ""
+"Gotovo! %1$s postovi su uspešno procesovani u  %2$s sekunde i nije bilo "
+"grešaka. %3$s"
+
+#: remove-extra-media.php:292
+msgid "Abort Processing Posts"
+msgstr "Ukinuti postove u procesu"
+
+#: remove-extra-media.php:294
+msgid "Debugging Information"
+msgstr "Debug informacije"
+
+#: remove-extra-media.php:297
+msgid "Total Postss: %s"
+msgstr "Ukupno postova: %s"
+
+#: remove-extra-media.php:298
+msgid "Posts Processed: %s"
+msgstr "Postovi u procesu: %s"
+
+#: remove-extra-media.php:299
+msgid "Process Failures: %s"
+msgstr "Procesi koji nisu uspeli: %s"
+
+#: remove-extra-media.php:330
+msgid "Stopping, please wait a moment."
+msgstr "Stalo je, sačekajte momenat.."
+
+#: remove-extra-media.php:432
+msgid "Failed Processing: %s is incorrect post type."
+msgstr "Proces nije uspeo: %s nije dobar tip posta"
+
+#: remove-extra-media.php:436
+msgid "No"
+msgstr "Ne"
+
+#: remove-extra-media.php:438
+msgid ""
+"&quot;<a href=\"%1$s\" target=\"_blank\">%2$s</a>&quot; Post ID %3$s was "
+"successfully processed in %4$s seconds. <strong>%5$s</strong> extra media "
+"removed."
+msgstr ""
+"&quot;<a href=\"%1$s\" target=\"_blank\">%2$s</a>&quot; Post ID %3$s uspešno "
+"procesovan u %4$s sekundi. <strong>%5$s</strong> ekstra mediji su ukolnjeni."
+
+#: remove-extra-media.php:489
+msgid ""
+"If your Remove Extra Media display has gone to funky town, please <a href="
+"\"%s\">read the FAQ</a> about possible CSS fixes."
+msgstr ""
+"Ako vaš Remove Extra Media  prikaz nije dobar, molim <a href=\"%s"
+"\">pročitajte FAQ</a> o mogućim CSS popravkama."
+
+#: remove-extra-media.php:498
+msgid ""
+"Please donate $5 towards development and support of this Remove Extra Media "
+"plugin. %s"
+msgstr "Donirajte $5 za razvoj i podršku Remove Extra Media plugina. %s"
+
+#. Plugin URI of the plugin/theme
+msgid "http://wordpress.org/extend/plugins/remove-extra-media/"
+msgstr "http://wordpress.org/extend/plugins/remove-extra-media/"
+
+#. Author of the plugin/theme
+msgid "Michael Cannon"
+msgstr "Michael Cannon"
+
+#. Author URI of the plugin/theme
+msgid "http://aihr.us/about-aihrus/michael-cannon-resume/"
+msgstr "http://aihr.us/about-aihrus/michael-cannon-resume/"

@@ -1,0 +1,364 @@
+# Copyright (C) 2013 Remove Extra Media
+# This file is distributed under the same license as the Remove Extra Media package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Remove Extra Media 1.0.1\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/remove-extra-media\n"
+"POT-Creation-Date: 2013-10-24 05:07:51+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2014-03-10 13:57+0100\n"
+"Last-Translator: jelena kovacevic <jecajeca260@gmail.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"X-Generator: Poedit 1.5.5\n"
+
+#: lib/class-remove-extra-media-settings.php:83
+#: lib/class-remove-extra-media-settings.php:323 remove-extra-media.php:73
+msgid "Remove Extra Media Settings"
+msgstr "Eliminar configuración de Remove Extra Media"
+
+#. #-#-#-#-#  remove-extra-media.pot (Remove Extra Media 1.0.1)  #-#-#-#-#
+#. Plugin Name of the plugin/theme
+#: lib/class-remove-extra-media-settings.php:83
+msgid "Remove Extra Media"
+msgstr "Remove Extra Media"
+
+#: lib/class-remove-extra-media-settings.php:91 remove-extra-media.php:66
+#: remove-extra-media.php:169
+msgid "Remove Extra Media Processer"
+msgstr "Procesador de Remove Extra Media"
+
+#: lib/class-remove-extra-media-settings.php:119
+#: lib/class-remove-extra-media-settings.php:814
+msgid "General"
+msgstr "General"
+
+#: lib/class-remove-extra-media-settings.php:120
+msgid "Testing"
+msgstr "Probando"
+
+#: lib/class-remove-extra-media-settings.php:121
+msgid "Compatibility & Reset"
+msgstr "Compatibilidad y reinico"
+
+#: lib/class-remove-extra-media-settings.php:122
+msgid "About Remove Extra Media"
+msgstr "Acerca de Remove Extra Media"
+
+#: lib/class-remove-extra-media-settings.php:138
+msgid "Post Type"
+msgstr "Tipo de publicación"
+
+#: lib/class-remove-extra-media-settings.php:139
+msgid "Post type to remove excess media from."
+msgstr "Tipo de publicación a la cual eliminar exceso de medios."
+
+#: lib/class-remove-extra-media-settings.php:146
+msgid "Media Limit"
+msgstr "Límite de medios"
+
+#: lib/class-remove-extra-media-settings.php:147
+msgid ""
+"Number of media items to limit selected post types to. Count includes "
+"featured image."
+msgstr ""
+"Número de  elementos de medios para limitar los tipos de publicación "
+"seleccionados. La cuenta incluye imagen destacada."
+
+#: lib/class-remove-extra-media-settings.php:155
+msgid "Debug Mode?"
+msgstr "¿Modo de depuracion?"
+
+#: lib/class-remove-extra-media-settings.php:156
+msgid ""
+"Bypass Ajax controller to handle posts_to_import directly for testing "
+"purposes."
+msgstr ""
+"Controlador Bypass Ajax para manejar posts_to_import directamente para "
+"realizar pruebas."
+
+#: lib/class-remove-extra-media-settings.php:162
+msgid "Posts to Import"
+msgstr ""
+"Una lista CSV de identificadores de publicaciones para importar, como '1, "
+"2,3 '."
+
+#: lib/class-remove-extra-media-settings.php:163
+msgid "A CSV list of post ids to import, like '1,2,3'."
+msgstr "Saltar Importación de Publicaciones"
+
+#: lib/class-remove-extra-media-settings.php:171
+msgid "Skip Importing Posts"
+msgstr ""
+"Una lista CSV de identificadores de publicación para no importar, como '1, "
+"2,3 '."
+
+#: lib/class-remove-extra-media-settings.php:172
+msgid "A CSV list of post ids to not import, like '1,2,3'."
+msgstr ""
+"Una lista CSV de identificadores de publicación para no importar, como '1, "
+"2,3 '."
+
+#: lib/class-remove-extra-media-settings.php:180
+msgid "Import Limit"
+msgstr "Límite de Importación"
+
+#: lib/class-remove-extra-media-settings.php:181
+msgid ""
+"Useful for testing import on a limited amount of posts. 0 or blank means "
+"unlimited."
+msgstr ""
+"Útil para pruebas de importación de una cantidad limitada de publicaciones. "
+"0 o en blanco significa ilimitado."
+
+#: lib/class-remove-extra-media-settings.php:196
+msgid "Export Settings"
+msgstr "Configuración de exportación"
+
+#: lib/class-remove-extra-media-settings.php:198
+msgid ""
+"These are your current settings in a serialized format. Copy the contents to "
+"make a backup of your settings."
+msgstr ""
+"Ésta es la configuración actual en un formato serializado. Copie el "
+"contenido para hacer una copia de seguridad de la configuración."
+
+#: lib/class-remove-extra-media-settings.php:206
+msgid "Import Settings"
+msgstr "Configuración de importación"
+
+#: lib/class-remove-extra-media-settings.php:208
+msgid ""
+"Paste new serialized settings here to overwrite your current configuration."
+msgstr ""
+"Pegue nuevas configuraciones serializadas aquí para sobrescribir la "
+"configuración actual."
+
+#: lib/class-remove-extra-media-settings.php:214
+msgid "Remove Plugin Data on Deletion?"
+msgstr "¿Eliminar información del pluginal eliminar?"
+
+#: lib/class-remove-extra-media-settings.php:217
+msgid ""
+"Delete all Remove Extra Media data and options from database on plugin "
+"deletion"
+msgstr ""
+"Eliminar toda la información y opciones de Remove Extra Media al elimnar el "
+"plugin"
+
+#: lib/class-remove-extra-media-settings.php:223
+msgid "Reset to Defaults?"
+msgstr "¿Restablecer los valores predeterminados?"
+
+#: lib/class-remove-extra-media-settings.php:226
+msgid "Check this box to reset options to their defaults"
+msgstr ""
+"Marque esta casilla para restablecer las opciones a sus valores "
+"predeterminados"
+
+#: lib/class-remove-extra-media-settings.php:340
+msgid "Save Changes"
+msgstr "Guardar cambios"
+
+#: lib/class-remove-extra-media-settings.php:349
+msgid ""
+"If you like this plugin, please <a href=\"%1$s\" title=\"Donate for Good "
+"Karma\"><img src=\"%2$s\" border=\"0\" alt=\"Donate for Good Karma\" /></a> "
+"or <a href=\"%3$s\" title=\"purchase Remove Extra Media Premium\">purchase "
+"Remove Extra Media Premium</a> to help fund further development and <a href="
+"\"%4$s\" title=\"Support forums\">support</a>."
+msgstr ""
+"Si le gusta este plugin, por favor <a href=\"%1$s\" title=\"Done para un "
+"Buen Karma\"> <img src=\"%2$s\" border=\"0\" alt=\" Done para un Buen Karma"
+"\" /> </a> o <a href=\"%3$s\" title=\"comprar Remove Extra Media Premium\"> "
+"comprar Remove Extra Media Premium </a> para ayudar a financiar el "
+"desarrollo y la <a href=\"%4$s\" title=\"Foros de soporte\">soporte</a>."
+
+#: lib/class-remove-extra-media-settings.php:360
+msgid "Copyright &copy;%1$s <a href=\"%2$s\">Aihrus</a>."
+msgstr "Copyright &copy;%1$s <a href=\"%2$s\">Aihrus</a>."
+
+#: lib/class-remove-extra-media-settings.php:712
+msgid "Required"
+msgstr "Requerido"
+
+#: lib/class-remove-extra-media-settings.php:801
+msgid "For more information:"
+msgstr "Para más información:"
+
+#: lib/class-remove-extra-media-settings.php:802
+msgid ""
+"These Remove Extra Media Settings establish the default option values for "
+"shortcodes, theme functions, and widget instances."
+msgstr ""
+"Esta configuración de Remove Extra media establece los valores de las "
+"opciones predeterminadas de códigos cortos, funciones temáticas, y las "
+"instancias de widgets."
+
+#: lib/class-remove-extra-media-settings.php:805
+msgid "View the <a href=\"%s\">Remove Extra Media documentation</a>."
+msgstr "Ver la <a href=\"%s\">Documentación Remove Extra Media</a>."
+
+#: lib/class-remove-extra-media-settings.php:815
+msgid "Show or hide optional fields."
+msgstr "Mostrar u ocultar campos opcionales."
+
+#: remove-extra-media.php:61
+msgid "Settings"
+msgstr "Configuración"
+
+#: remove-extra-media.php:92
+msgid "Process"
+msgstr "Procesar"
+
+#: remove-extra-media.php:161
+msgid "Your user account doesn't have permission to access this."
+msgstr "Su cuenta de usuario no tiene permiso para acceder a esto."
+
+#: remove-extra-media.php:198
+msgid "All done. No posts needing processing found."
+msgstr "Listo. No se encontró ninguna publicación que requiera procesamiento."
+
+#. #-#-#-#-#  remove-extra-media.pot (Remove Extra Media 1.0.1)  #-#-#-#-#
+#. Description of the plugin/theme
+#: remove-extra-media.php:252
+msgid ""
+"Use this tool to remove extra media attachments from your selected post "
+"types."
+msgstr ""
+"Utilice esta herramienta para eliminar los archivos adjuntos de los medios "
+"adicionales de los tipos de publicación seleccionados."
+
+#: remove-extra-media.php:254
+msgid ""
+"This processing is not reversible. Backup your database and files beforehand "
+"or be prepared to revert each transformmed post manually."
+msgstr ""
+"Este proceso no es reversible. Haga una copia de seguridad de su base de "
+"datos y archivos de antemano o esté dispuesto a revertir cada publicación "
+"manualmente."
+
+#: remove-extra-media.php:256
+msgid "Please review your %s before proceeding."
+msgstr "Por favor revise su %s antes de continuar."
+
+#: remove-extra-media.php:258
+msgid "To begin, just press the button below."
+msgstr "Para empezar, basta con pulsar el botón de abajo."
+
+#: remove-extra-media.php:260
+msgid "Process Remove Extra Media"
+msgstr "Procesar Remove Extra Media"
+
+#: remove-extra-media.php:262 remove-extra-media.php:286
+msgid "You must enable Javascript in order to proceed!"
+msgstr "¡Debe habilitar Javascript para poder continuar!"
+
+#: remove-extra-media.php:275
+msgid ""
+"Please be patient while this script run. This can take a while, up to a "
+"minute per post. Do not navigate away from this page until this script is "
+"done or the import will not be completed. You will be notified via this page "
+"when the import is completed."
+msgstr ""
+"Por favor, sea paciente mientras se ejecuta este script. Esto puede llevar "
+"un tiempo, hasta un minuto por mensaje. No salir de esta página hasta que "
+"este script termine o no se completará la importación. Se le notificará a "
+"través de esta página cuando finalice la importación."
+
+#: remove-extra-media.php:277
+msgid "Estimated time required to import is %1$s minutes."
+msgstr "Tiempo estimado necesario para importar es %1$s minutos."
+
+#: remove-extra-media.php:279
+msgid "To go back to the previous page, <a href=\"%s\">click here</a>."
+msgstr "Para volver a la página anterior, <a href=\"%s\"> haga clic aquí </a>."
+
+#: remove-extra-media.php:281
+msgid ""
+"All done! %1$s posts were successfully processed in %2$s seconds and there "
+"were %3$s failures. To try importing the failed posts again, <a href=\"%4$s"
+"\">click here</a>. %5$s"
+msgstr ""
+"Listo! %1$s mensajes fueron procesados ​​con éxito en %2$s segundos y hubo "
+"%3$s fallas. Para tratar de importar los mensajes fallidos de nuevo, <a href="
+"\"%4$s\"> haga clic aquí </a>. %5$s"
+
+#: remove-extra-media.php:283
+msgid ""
+"All done! %1$s posts were successfully processed in %2$s seconds and there "
+"were no failures. %3$s"
+msgstr ""
+"¡Listo! %1$s mensajes fueron procesados ​​con éxito en %2$s segundos y no hubo "
+"fallas. %3$s"
+
+#: remove-extra-media.php:292
+msgid "Abort Processing Posts"
+msgstr "Abortar Procesamiento de Mensajes"
+
+#: remove-extra-media.php:294
+msgid "Debugging Information"
+msgstr "Información de Depuración "
+
+#: remove-extra-media.php:297
+msgid "Total Postss: %s"
+msgstr "Mensajes totales: %s"
+
+#: remove-extra-media.php:298
+msgid "Posts Processed: %s"
+msgstr "Mensajes procesados: %s"
+
+#: remove-extra-media.php:299
+msgid "Process Failures: %s"
+msgstr "Errores de proceso: %s"
+
+#: remove-extra-media.php:330
+msgid "Stopping, please wait a moment."
+msgstr "Parando, por favor espere un momento."
+
+#: remove-extra-media.php:432
+msgid "Failed Processing: %s is incorrect post type."
+msgstr "Error Procesando: %s es un tipo de mensaje incorrecto."
+
+#: remove-extra-media.php:436
+msgid "No"
+msgstr "No"
+
+#: remove-extra-media.php:438
+msgid ""
+"&quot;<a href=\"%1$s\" target=\"_blank\">%2$s</a>&quot; Post ID %3$s was "
+"successfully processed in %4$s seconds. <strong>%5$s</strong> extra media "
+"removed."
+msgstr ""
+"&quot;<a href=\"%1$s\" target=\"_blank\">%2$s</a>&quot; ID de Publicación "
+"%3$s fue procesada con éxito en %4$s segundos. <strong>%5$s</strong> de "
+"medios adicionales eliminados."
+
+#: remove-extra-media.php:489
+msgid ""
+"If your Remove Extra Media display has gone to funky town, please <a href="
+"\"%s\">read the FAQ</a> about possible CSS fixes."
+msgstr ""
+"Si su pantalla Remove Extra Media se ha vuelto loca, <a href=\"%s\"> leer la "
+"FAQ </a> acerca de las posibles correcciones de CSS."
+
+#: remove-extra-media.php:498
+msgid ""
+"Please donate $5 towards development and support of this Remove Extra Media "
+"plugin. %s"
+msgstr ""
+"Por favor done $ 5 hacia el desarrollo y el apoyo de este Plugin Remove "
+"Extra Media. %s"
+
+#. Plugin URI of the plugin/theme
+msgid "http://wordpress.org/extend/plugins/remove-extra-media/"
+msgstr "http://wordpress.org/extend/plugins/remove-extra-media/"
+
+#. Author of the plugin/theme
+msgid "Michael Cannon"
+msgstr "Michael Cannon"
+
+#. Author URI of the plugin/theme
+msgid "http://aihr.us/about-aihrus/michael-cannon-resume/"
+msgstr "http://aihr.us/about-aihrus/michael-cannon-resume/"
