@@ -176,8 +176,8 @@ msgstr ""
 "desarrollo y la <a href=\"%4$s\" title=\"Foros de soporte\">soporte</a>."
 
 #: lib/class-remove-extra-media-settings.php:360
-msgid "Copyright &copy;%1$s <a href=\"%2$s\">Aihrus</a>."
-msgstr "Copyright &copy;%1$s <a href=\"%2$s\">Aihrus</a>."
+msgid "Copyright &copy;%1$s <a href=\"%2$s\">Axelerant</a>."
+msgstr "Copyright &copy;%1$s <a href=\"%2$s\">Axelerant</a>."
 
 #: lib/class-remove-extra-media-settings.php:712
 msgid "Required"
@@ -360,5 +360,5 @@ msgid "Michael Cannon"
 msgstr "Michael Cannon"
 
 #. Author URI of the plugin/theme
-msgid "http://aihr.us/about-aihrus/michael-cannon-resume/"
-msgstr "http://aihr.us/about-aihrus/michael-cannon-resume/"
+msgid "http://axelerant.com/"
+msgstr "http://axelerant.com/"

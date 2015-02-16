@@ -1,6 +1,6 @@
 <?php
 /*
-	Copyright 2013 Michael Cannon (email: mc@aihr.us)
+	Copyright 2015 Axelerant (email: info@axelerant.com)
 
 	This program is free software; you can redistribute it and/or modify
 	it under the terms of the GNU General Public License, version 2, as
@@ -357,7 +357,7 @@ class Remove_Extra_Media_Settings {
 
 		echo '<p class="copyright">' .
 			sprintf(
-			__( 'Copyright &copy;%1$s <a href="%2$s">Aihrus</a>.', 'remove-extra-media' ),
+			__( 'Copyright &copy;%1$s <a href="%2$s">Axelerant</a>.', 'remove-extra-media' ),
 			date( 'Y' ),
 			esc_url( 'http://aihr.us' )
 		) .

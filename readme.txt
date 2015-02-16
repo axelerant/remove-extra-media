@@ -1,19 +1,18 @@
-=== Remove Extra Media by Aihrus ===
+=== Remove Extra Media by Axelerant ===
 
 Contributors: comprock
-Donate link: http://aihr.us/about-aihrus/donate/
 Tags: remove, media, posts
 Requires at least: 3.5
 Tested up to: 3.8.0
-Stable tag: 1.0.1
+Stable tag: 1.1.0RC1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Use Remove Extra Media by Aihrus to remove extra media attachments from your selected post types.
+Use Remove Extra Media by Axelerant to remove extra media attachments from your selected post types.
 
 == Description ==
 
-Use Remove Extra Media [by Aihrus](http://aihr.us/about-aihrus/) to remove extra media attachments from your selected post types.
+Use Remove Extra Media [by Axelerant](http://axelerant.com/about-axelerant/) to remove extra media attachments from your selected post types.
 
 In my use case, my testimonials widgets post types in some cases, for whatever reason, had up to 7 extra media attachments related to them. I wanted a quick way to clear those excess out. Considering that the only image or media attachment a testimonial should have was the featured, I simply removed all the others.
 
@@ -59,8 +58,8 @@ This tool works by removing the attachment relationship as this saves the media 
 = Install Methods =
 
 * Through WordPress Admin > Plugins > Add New, Search for "Remove Extra Media"
-	* Find "Remove Extra Media by Aihrus"
-	* Click "Install Now" of "Remove Extra Media by Aihrus"
+	* Find "Remove Extra Media"
+	* Click "Install Now" of "Remove Extra Media"
 * Download [`remove-extra-media.zip`](http://downloads.wordpress.org/plugin/remove-extra-media.zip) locally
 	* Through WordPress Admin > Plugins > Add New
 	* Click Upload
@@ -94,9 +93,9 @@ This tool works by removing the attachment relationship as this saves the media 
 
 = Most Common Issues =
 
-* Got `Parse error: syntax error, unexpected T_STATIC, expecting ')'`? Read [Most Aihrus Plugins Require PHP 5.3+](https://aihrus.zendesk.com/entries/30678006) for the fixes.
-* [Debug common theme and plugin conflicts](https://aihrus.zendesk.com/entries/25119302)
-* [Change or debug CSS](https://aihrus.zendesk.com/entries/24910733)
+* Got `Parse error: syntax error, unexpected T_STATIC, expecting ')'`? Read [Most Axelerant Plugins Require PHP 5.3+](https://nodedesk.zendesk.com/hc/en-us/articles/202331041) for the fixes.
+* [Debug common theme and plugin conflicts](https://nodedesk.zendesk.com/hc/en-us/articles/202330781)
+* [Change or debug CSS](https://nodedesk.zendesk.com/hc/en-us/articles/202243372)
 
 = Still Stuck or Want Something Done? Get Support! =
 
@@ -104,7 +103,7 @@ This tool works by removing the attachment relationship as this saves the media 
 1. [Open Remove Extra Media Issues](https://github.com/michael-cannon/remove-extra-media/issues) - review and submit bug reports and enhancement requests
 1. [Remove Extra Media Support on WordPress](http://wordpress.org/support/plugin/remove-extra-media) - ask questions and review responses
 1. [Contribute Code to Remove Extra Media](https://github.com/michael-cannon/remove-extra-media/blob/master/CONTRIBUTING.md)
-1. [Beta Testers Needed](http://aihr.us/become-beta-tester/) - get the latest Remove Extra Media version
+1. [Beta Testers Needed](http://axelerant.com/become-beta-tester/) - get the latest Remove Extra Media version
 
 
 == Screenshots ==
@@ -140,9 +139,9 @@ TBD
 
 == Localization ==
 
-You can translate this plugin into your own language if it's not done so already. The localization file `remove-extra-media.pot` can be found in the `languages` folder of this plugin. After translation, please [send the localized file](http://aihr.us/contact-aihrus/) for plugin inclusion.
+You can translate this plugin into your own language if it's not done so already. The localization file `remove-extra-media.pot` can be found in the `languages` folder of this plugin. After translation, please [send the localized file](http://axelerant.com/contact-axelerant/) for plugin inclusion.
 
-**[How do I localize?](https://aihrus.zendesk.com/entries/23691557)**
+**[How do I localize?](https://nodedesk.zendesk.com/hc/en-us/articles/202294892)**
 
 * Serbian by [Ognjen Djuraskovic](http://firstsiteguide.com)
 * Spanish by [Ognjen Djuraskovic](http://firstsiteguide.com)

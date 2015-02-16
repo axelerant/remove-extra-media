@@ -1,11 +1,11 @@
 <?php
 /**
- * Plugin Name: Remove Extra Media by Aihrus
+ * Plugin Name: Remove Extra Media
  * Plugin URI: http://wordpress.org/extend/plugins/remove-extra-media/
- * Description: Use Remove Extra Media by Aihrus to remove extra media attachments from your selected post types.
- * Version: 1.0.1
- * Author: Michael Cannon
- * Author URI: http://aihr.us/about-aihrus/michael-cannon-resume/
+ * Description: Use Remove Extra Media by Axelerant to remove extra media attachments from your selected post types.
+ * Version: 1.1.0RC1
+ * Author: Axelerant
+ * Author URI: http://axelerant.com/
  * License: GPLv2 or later
  * Text Domain: remove-extra-media
  * Domain Path: /languages
@@ -13,7 +13,7 @@
 
 
 /**
- * Copyright 2013 Michael Cannon (email: mc@aihr.us)
+ * Copyright 2015 Axelerant (email: info@axelerant.com)
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License, version 2, as
  * published by the Free Software Foundation.
@@ -490,7 +490,7 @@ EOD;
 
 	public static function admin_notices_0_0_1() {
 		$content  = '<div class="updated fade"><p>';
-		$content .= sprintf( __( 'If your Remove Extra Media display has gone to funky town, please <a href="%s">read the FAQ</a> about possible CSS fixes.', 'remove-extra-media' ), 'https://aihrus.zendesk.com/entries/23722573-Major-Changes-Since-2-10-0' );
+		$content .= sprintf( __( 'If your Remove Extra Media display has gone to funky town, please <a href="%s">read the FAQ</a> about possible CSS fixes.', 'remove-extra-media' ), 'https://nodedesk.zendesk.com/hc/en-us/articles/202244392-Major-Changes-Since-2-10-0' );
 		$content .= '</p></div>';
 
 		echo $content;

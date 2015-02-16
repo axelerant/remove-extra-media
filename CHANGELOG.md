@@ -1,5 +1,9 @@
 # CHANGELOG Remove Extra Media plugin for WordPress
 
+## 1.1.0RC1
+* Change brand name from Aihrus to Axelerant
+* Change conpyright text
+
 ## master
 * Convert TODO to https://github.com/michael-cannon/remove-extra-media/issues
 * Convert to static class coding
