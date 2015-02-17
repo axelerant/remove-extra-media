@@ -1,4 +1,4 @@
-=== Remove Extra Media by Axelerant ===
+=== Remove Extra Media ===
 
 Contributors: comprock
 Tags: remove, media, posts
@@ -8,11 +8,11 @@ Stable tag: 1.1.0RC1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Use Remove Extra Media by Axelerant to remove extra media attachments from your selected post types.
+Use Remove Extra Media to remove extra media attachments from your selected post types.
 
 == Description ==
 
-Use Remove Extra Media [by Axelerant](http://axelerant.com/about-axelerant/) to remove extra media attachments from your selected post types.
+Use Remove Extra Media to remove extra media attachments from your selected post types.
 
 In my use case, my testimonials widgets post types in some cases, for whatever reason, had up to 7 extra media attachments related to them. I wanted a quick way to clear those excess out. Considering that the only image or media attachment a testimonial should have was the featured, I simply removed all the others.
 
@@ -99,7 +99,7 @@ This tool works by removing the attachment relationship as this saves the media 
 
 = Still Stuck or Want Something Done? Get Support! =
 
-1. [Remove Extra Media Knowledge Base](https://aihrus.zendesk.com/categories/20128436) - read and comment upon frequently asked questions
+1. [Remove Extra Media Knowledge Base](https://nodedesk.zendesk.com/hc/en-us/sections/200861112-WordPress-FAQs) - read and comment upon frequently asked questions
 1. [Open Remove Extra Media Issues](https://github.com/michael-cannon/remove-extra-media/issues) - review and submit bug reports and enhancement requests
 1. [Remove Extra Media Support on WordPress](http://wordpress.org/support/plugin/remove-extra-media) - ask questions and review responses
 1. [Contribute Code to Remove Extra Media](https://github.com/michael-cannon/remove-extra-media/blob/master/CONTRIBUTING.md)

@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Remove Extra Media
  * Plugin URI: http://wordpress.org/extend/plugins/remove-extra-media/
- * Description: Use Remove Extra Media by Axelerant to remove extra media attachments from your selected post types.
+ * Description: Use Remove Extra Media to remove extra media attachments from your selected post types.
  * Version: 1.1.0RC1
  * Author: Axelerant
  * Author URI: http://axelerant.com/
