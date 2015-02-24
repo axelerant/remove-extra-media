@@ -16,7 +16,7 @@ Here's a [guide on how to install Remove Extra Media in your WordPress site](htt
 * You can clone the GitHub repository: https://github.com/michael-cannon/remove-extra-media.git
 * Download it directly as a ZIP file: https://github.com/michael-cannon/remove-extra-media/archive/master.zip
 
-This will download the latest development version of Remove Extra Media by Michael Cannon. While this version is usually stable, it is not recommended for use in a production environment.
+This will download the latest development version of Remove Extra Media. While this version is usually stable, it is not recommended for use in a production environment.
 
 ## Bugs
 
@@ -24,7 +24,7 @@ If you find an issue, [let us know here](https://github.com/michael-cannon/remov
 
 ## Support
 
-This is a developer's portal for Remove Extra Media by Michael Cannon and should not be used for support. Please visit the [Remove Extra Media Knowledge Base](https://aihrus.zendesk.com/categories/20128436-Remove-Extra-Media) for frequently asked questions, offering ideas, or getting support.
+This is a developer's portal for Remove Extra Media and should not be used for support. Please visit the [Remove Extra Media Knowledge Base](https://aihrus.zendesk.com/categories/20128436-Remove-Extra-Media) for frequently asked questions, offering ideas, or getting support.
 
 ## Contributions
 
@@ -34,7 +34,7 @@ There are various ways you can contribute:
 
 * [Raise an issue](https://github.com/michael-cannon/remove-extra-media/issues) on GitHub.
 * Send us a Pull Request with your bug fixes and/or new features.
-* [Translate Remove Extra Media by Michael Cannon into different languages](https://nodedesk.zendesk.com/hc/en-us/articles/202294892-How-do-I-change-Testimonials-Widget-text-labels-).
+* [Translate Remove Extra Media into different languages](https://nodedesk.zendesk.com/hc/en-us/articles/202294892-How-do-I-change-Testimonials-Widget-text-labels-).
 * Provide feedback and [suggestions on enhancements](https://github.com/michael-cannon/remove-extra-media/issues?direction=desc&labels=Enhancement&page=1&sort=created&state=open).
 
 ## Thank You

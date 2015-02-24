@@ -1,8 +1,9 @@
 # CHANGELOG Remove Extra Media plugin for WordPress
 
 ## 1.1.0RC1
-* Change brand name from Aihrus to Axelerant
-* Change conpyright text
+* Change branding from Aihrus to Axelerant
+* Update copyright text
+* Update PHPCS to WordPress-Core
 
 ## master
 * Convert TODO to https://github.com/michael-cannon/remove-extra-media/issues
