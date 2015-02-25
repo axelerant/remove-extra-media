@@ -24,7 +24,7 @@ If you find an issue, [let us know here](https://github.com/michael-cannon/remov
 
 ## Support
 
-This is a developer's portal for Remove Extra Media and should not be used for support. Please visit the [Remove Extra Media Knowledge Base](https://aihrus.zendesk.com/categories/20128436-Remove-Extra-Media) for frequently asked questions, offering ideas, or getting support.
+This is a developer's portal for Remove Extra Media and should not be used for support. Please visit the [Remove Extra Media Knowledge Base](https://nodedesk.zendesk.com/hc/en-us/sections/200861112-WordPress-FAQs) for frequently asked questions, offering ideas, or getting support.
 
 ## Contributions
 

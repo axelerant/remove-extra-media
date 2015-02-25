@@ -347,10 +347,10 @@ class Remove_Extra_Media_Settings {
 			echo '<p>' .
 				sprintf(
 				__( 'If you like this plugin, please <a href="%1$s" title="Donate for Good Karma"><img src="%2$s" border="0" alt="Donate for Good Karma" /></a> or <a href="%3$s" title="purchase Remove Extra Media Premium">purchase Remove Extra Media Premium</a> to help fund further development and <a href="%4$s" title="Support forums">support</a>.', 'remove-extra-media' ),
-				esc_url( 'http://aihr.us/about-aihrus/donate/' ),
+				esc_url( 'http://axelerant.com/about-axelerant/donate/' ),
 				esc_url( 'https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif' ),
-				esc_url( 'http://aihr.us/downloads/' ),
-				esc_url( 'https://aihrus.zendesk.com/categories/20128436-Remove-Extra-Media' )
+				esc_url( 'http://axelerant.com/downloads/' ),
+				esc_url( 'https://nodedesk.zendesk.com/hc/en-us/sections/200861112-WordPress-FAQs' )
 			) .
 				'</p>';
 		}
@@ -359,7 +359,7 @@ class Remove_Extra_Media_Settings {
 			sprintf(
 			__( 'Copyright &copy;%1$s <a href="%2$s">Axelerant</a>.', 'remove-extra-media' ),
 			date( 'Y' ),
-			esc_url( 'http://aihr.us' )
+			esc_url( 'http://axelerant.com' )
 		) .
 			'</p>';
 
