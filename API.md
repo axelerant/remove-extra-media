@@ -1,4 +1,4 @@
-# Remove Extra Media API Documentation
+# API - Remove Extra Media
 
 The [Remove Extra Media plugin](http://wordpress.org/plugins/remove-extra-media/) comes with its own set of actions and filters, as described below.
 

@@ -1,4 +1,4 @@
-# Contribute To Remove Extra Media
+# CONTRIBUTE - Remove Extra Media
 
 Community made patches, localisation, bug reports and contributions are very welcome and help make Remove Extra Media the #1 bulk/quick edit plugin for WordPress.
 

@@ -1,8 +1,10 @@
-# CHANGELOG Remove Extra Media plugin for WordPress
+# CHANGELOG - Remove Extra Media
 
 ## 1.1.0RC1
 * Change branding from Aihrus to Axelerant
+* Update about tab
 * Update copyright text
+* Update file headers
 * Update PHPCS to WordPress-Core
 
 ## master

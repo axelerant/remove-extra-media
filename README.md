@@ -1,6 +1,5 @@
-# Remove Extra Media plugin for WordPress
+# README - Remove Extra Media
 
-[![Build Status](https://travis-ci.org/michael-cannon/remove-extra-media.png?branch=master)](https://travis-ci.org/michael-cannon/remove-extra-media)
 [![ProjectStatus](http://stillmaintained.com/michael-cannon/remove-extra-media.png)](http://stillmaintained.com/michael-cannon/remove-extra-media)
 
 ## Welcome to the Remove Extra Media Github repository
