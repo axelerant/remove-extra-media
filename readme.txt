@@ -1,6 +1,7 @@
 === Remove Extra Media ===
 
 Contributors: comprock, saurabhd
+Donate link: http://axelerant.com/about-axelerant/donate/
 Tags: remove, media, posts
 Requires at least: 3.5
 Tested up to: 3.8.0
