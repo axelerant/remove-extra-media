@@ -1,6 +1,6 @@
 # CHANGELOG - Remove Extra Media
 
-## 1.1.0RC1
+## 1.1.0
 * Change branding from Aihrus to Axelerant
 * Update about tab
 * Update copyright text

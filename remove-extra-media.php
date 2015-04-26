@@ -3,7 +3,7 @@
  * Plugin Name: Remove Extra Media
  * Plugin URI: http://wordpress.org/extend/plugins/remove-extra-media/
  * Description: Use Remove Extra Media to remove extra media attachments from your selected post types.
- * Version: 1.1.0RC1
+ * Version: 1.1.0
  * Author: Axelerant
  * Author URI: http://axelerant.com/
  * License: GPLv2 or later
@@ -28,7 +28,7 @@
 class Remove_Extra_Media {
 	const ID          = 'remove-extra-media';
 	const PLUGIN_FILE = 'remove-extra-media/remove-extra-media.php';
-	const VERSION     = '1.0.1';
+	const VERSION     = '1.1.0';
 
 	private static $base;
 	private static $post_types;
