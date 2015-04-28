@@ -1,35 +1,33 @@
-# Copyright (C) 2013 Remove Extra Media
+# Copyright (C) 2015 Remove Extra Media
 # This file is distributed under the same license as the Remove Extra Media package.
 msgid ""
 msgstr ""
-"Project-Id-Version: Remove Extra Media 1.0.1\n"
-"Report-Msgid-Bugs-To: http://wordpress.org/tag/remove-extra-media\n"
-"POT-Creation-Date: 2013-10-24 05:07:51+00:00\n"
+"Project-Id-Version: Remove Extra Media 1.1.0\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/support/plugin/remove-extra-media\n"
+"POT-Creation-Date: 2015-04-28 23:01:39+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2013-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2015-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 
 #: lib/class-remove-extra-media-settings.php:83
-#: lib/class-remove-extra-media-settings.php:323 remove-extra-media.php:73
+#: lib/class-remove-extra-media-settings.php:323 remove-extra-media.php:76
 msgid "Remove Extra Media Settings"
 msgstr ""
 
-#. #-#-#-#-#  remove-extra-media.pot (Remove Extra Media 1.0.1)  #-#-#-#-#
-#. Plugin Name of the plugin/theme
 #: lib/class-remove-extra-media-settings.php:83
 msgid "Remove Extra Media"
 msgstr ""
 
-#: lib/class-remove-extra-media-settings.php:91 remove-extra-media.php:66
-#: remove-extra-media.php:169
+#: lib/class-remove-extra-media-settings.php:91 remove-extra-media.php:69
+#: remove-extra-media.php:173
 msgid "Remove Extra Media Processer"
 msgstr ""
 
 #: lib/class-remove-extra-media-settings.php:119
-#: lib/class-remove-extra-media-settings.php:814
+#: lib/class-remove-extra-media-settings.php:822
 msgid "General"
 msgstr ""
 
@@ -58,9 +56,7 @@ msgid "Media Limit"
 msgstr ""
 
 #: lib/class-remove-extra-media-settings.php:147
-msgid ""
-"Number of media items to limit selected post types to. Count includes "
-"featured image."
+msgid "Number of media items to limit selected post types to. Count includes featured image."
 msgstr ""
 
 #: lib/class-remove-extra-media-settings.php:155
@@ -68,9 +64,7 @@ msgid "Debug Mode?"
 msgstr ""
 
 #: lib/class-remove-extra-media-settings.php:156
-msgid ""
-"Bypass Ajax controller to handle posts_to_import directly for testing "
-"purposes."
+msgid "Bypass Ajax controller to handle posts_to_import directly for testing purposes."
 msgstr ""
 
 #: lib/class-remove-extra-media-settings.php:162
@@ -94,9 +88,7 @@ msgid "Import Limit"
 msgstr ""
 
 #: lib/class-remove-extra-media-settings.php:181
-msgid ""
-"Useful for testing import on a limited amount of posts. 0 or blank means "
-"unlimited."
+msgid "Useful for testing import on a limited amount of posts. 0 or blank means unlimited."
 msgstr ""
 
 #: lib/class-remove-extra-media-settings.php:196
@@ -104,9 +96,7 @@ msgid "Export Settings"
 msgstr ""
 
 #: lib/class-remove-extra-media-settings.php:198
-msgid ""
-"These are your current settings in a serialized format. Copy the contents to "
-"make a backup of your settings."
+msgid "These are your current settings in a serialized format. Copy the contents to make a backup of your settings."
 msgstr ""
 
 #: lib/class-remove-extra-media-settings.php:206
@@ -114,8 +104,7 @@ msgid "Import Settings"
 msgstr ""
 
 #: lib/class-remove-extra-media-settings.php:208
-msgid ""
-"Paste new serialized settings here to overwrite your current configuration."
+msgid "Paste new serialized settings here to overwrite your current configuration."
 msgstr ""
 
 #: lib/class-remove-extra-media-settings.php:214
@@ -123,9 +112,7 @@ msgid "Remove Plugin Data on Deletion?"
 msgstr ""
 
 #: lib/class-remove-extra-media-settings.php:217
-msgid ""
-"Delete all Remove Extra Media data and options from database on plugin "
-"deletion"
+msgid "Delete all Remove Extra Media data and options from database on plugin deletion"
 msgstr ""
 
 #: lib/class-remove-extra-media-settings.php:223
@@ -141,172 +128,154 @@ msgid "Save Changes"
 msgstr ""
 
 #: lib/class-remove-extra-media-settings.php:349
-msgid ""
-"If you like this plugin, please <a href=\"%1$s\" title=\"Donate for Good "
-"Karma\"><img src=\"%2$s\" border=\"0\" alt=\"Donate for Good Karma\" /></a> "
-"or <a href=\"%3$s\" title=\"purchase Remove Extra Media Premium\">purchase "
-"Remove Extra Media Premium</a> to help fund further development and <a href="
-"\"%4$s\" title=\"Support forums\">support</a>."
+msgid "If you like this plugin, please <a href=\"%1$s\" title=\"Donate for Good Karma\"><img src=\"%2$s\" border=\"0\" alt=\"Donate for Good Karma\" /></a> or <a href=\"%3$s\" title=\"purchase Remove Extra Media Premium\">purchase Remove Extra Media Premium</a> to help fund further development and <a href=\"%4$s\" title=\"Support forums\">support</a>."
 msgstr ""
 
 #: lib/class-remove-extra-media-settings.php:360
 msgid "Copyright &copy;%1$s <a href=\"%2$s\">Axelerant</a>."
 msgstr ""
 
-#: lib/class-remove-extra-media-settings.php:712
+#: lib/class-remove-extra-media-settings.php:414
+msgid "<img class=\"size-medium\" src=\"%5$s\" alt=\"Axelerant 2015 Retreat in Goa\" width=\"640\" height=\"327\" /><p>We at Axelerant have transformed ourselves from being a simple Drupal development company into a thriving incubator for products and services related to DevOps, Drupal, ecommerce, project development, release management, WordPress, and 24/7 support. Inside Axelerant, we focus on talent that’s giving, open, passionate, process oriented, and self­directed. Our clients tend to be design agencies, media publishers, and other IT organizations.</p><h2>Vision</h2><p>Axelerant, making happiness possible</p><h2>Mission</h2><p>We’re an incubator for innovative products and services created to make the world a happier place.</p><h2>Core Values</h2><ul><li><b>Passion</b> – Our passion is so strong, we’re self­directed to make the difficult easy.</li><li><b>Openness</b> – We’re so honest and painstaking in our discussions that there are no questions left, and standards are created.</li><li><b>Giving</b> – We’re excited to share our results to inspire all to surpass them.</li></ul><p>Read more about…</p><ul><li><a href=\"%1$s\">Axelerant Team Members</a></li><li><a href=\"%2$s\">Drupal Give</a></li><li><a href=\"%3$s\">How We Work</a></li><li><a href=\"%4$s\">Testimonials</a></li><li><a href=\"%6$s\">Careers</a></li></ul>"
+msgstr ""
+
+#: lib/class-remove-extra-media-settings.php:720
 msgid "Required"
 msgstr ""
 
-#: lib/class-remove-extra-media-settings.php:801
+#: lib/class-remove-extra-media-settings.php:809
 msgid "For more information:"
 msgstr ""
 
-#: lib/class-remove-extra-media-settings.php:802
-msgid ""
-"These Remove Extra Media Settings establish the default option values for "
-"shortcodes, theme functions, and widget instances."
+#: lib/class-remove-extra-media-settings.php:810
+msgid "These Remove Extra Media Settings establish the default option values for shortcodes, theme functions, and widget instances."
 msgstr ""
 
-#: lib/class-remove-extra-media-settings.php:805
+#: lib/class-remove-extra-media-settings.php:813
 msgid "View the <a href=\"%s\">Remove Extra Media documentation</a>."
 msgstr ""
 
-#: lib/class-remove-extra-media-settings.php:815
+#: lib/class-remove-extra-media-settings.php:823
 msgid "Show or hide optional fields."
 msgstr ""
 
-#: remove-extra-media.php:61
+#: remove-extra-media.php:64
 msgid "Settings"
 msgstr ""
 
-#: remove-extra-media.php:92
+#: remove-extra-media.php:95
 msgid "Process"
 msgstr ""
 
-#: remove-extra-media.php:161
+#: remove-extra-media.php:165
 msgid "Your user account doesn't have permission to access this."
 msgstr ""
 
-#: remove-extra-media.php:198
+#: remove-extra-media.php:202
 msgid "All done. No posts needing processing found."
 msgstr ""
 
-#. #-#-#-#-#  remove-extra-media.pot (Remove Extra Media 1.0.1)  #-#-#-#-#
-#. Description of the plugin/theme
-#: remove-extra-media.php:252
-msgid ""
-"Use this tool to remove extra media attachments from your selected post "
-"types."
-msgstr ""
-
-#: remove-extra-media.php:254
-msgid ""
-"This processing is not reversible. Backup your database and files beforehand "
-"or be prepared to revert each transformmed post manually."
-msgstr ""
-
 #: remove-extra-media.php:256
-msgid "Please review your %s before proceeding."
+msgid "Use this tool to remove extra media attachments from your selected post types."
 msgstr ""
 
 #: remove-extra-media.php:258
-msgid "To begin, just press the button below."
+msgid "This processing is not reversible. Backup your database and files beforehand or be prepared to revert each transformed post manually."
 msgstr ""
 
 #: remove-extra-media.php:260
+msgid "Please review your %s before proceeding."
+msgstr ""
+
+#: remove-extra-media.php:262
+msgid "To begin, just press the button below."
+msgstr ""
+
+#: remove-extra-media.php:264
 msgid "Process Remove Extra Media"
 msgstr ""
 
-#: remove-extra-media.php:262 remove-extra-media.php:286
+#: remove-extra-media.php:266 remove-extra-media.php:290
 msgid "You must enable Javascript in order to proceed!"
 msgstr ""
 
-#: remove-extra-media.php:275
-msgid ""
-"Please be patient while this script run. This can take a while, up to a "
-"minute per post. Do not navigate away from this page until this script is "
-"done or the import will not be completed. You will be notified via this page "
-"when the import is completed."
-msgstr ""
-
-#: remove-extra-media.php:277
-msgid "Estimated time required to import is %1$s minutes."
-msgstr ""
-
 #: remove-extra-media.php:279
-msgid "To go back to the previous page, <a href=\"%s\">click here</a>."
+msgid "Please be patient while this script run. This can take a while, up to a minute per post. Do not navigate away from this page until this script is done or the import will not be completed. You will be notified via this page when the import is completed."
 msgstr ""
 
 #: remove-extra-media.php:281
-msgid ""
-"All done! %1$s posts were successfully processed in %2$s seconds and there "
-"were %3$s failures. To try importing the failed posts again, <a href=\"%4$s"
-"\">click here</a>. %5$s"
+msgid "Estimated time required to import is %1$s minutes."
 msgstr ""
 
 #: remove-extra-media.php:283
-msgid ""
-"All done! %1$s posts were successfully processed in %2$s seconds and there "
-"were no failures. %3$s"
+msgid "To go back to the previous page, <a href=\"%s\">click here</a>."
 msgstr ""
 
-#: remove-extra-media.php:292
+#: remove-extra-media.php:285
+msgid "All done! %1$s posts were successfully processed in %2$s seconds and there were %3$s failures. To try importing the failed posts again, <a href=\"%4$s\">click here</a>. %5$s"
+msgstr ""
+
+#: remove-extra-media.php:287
+msgid "All done! %1$s posts were successfully processed in %2$s seconds and there were no failures. %3$s"
+msgstr ""
+
+#: remove-extra-media.php:296
 msgid "Abort Processing Posts"
 msgstr ""
 
-#: remove-extra-media.php:294
+#: remove-extra-media.php:298
 msgid "Debugging Information"
 msgstr ""
 
-#: remove-extra-media.php:297
+#: remove-extra-media.php:301
 msgid "Total Postss: %s"
 msgstr ""
 
-#: remove-extra-media.php:298
+#: remove-extra-media.php:302
 msgid "Posts Processed: %s"
 msgstr ""
 
-#: remove-extra-media.php:299
+#: remove-extra-media.php:303
 msgid "Process Failures: %s"
 msgstr ""
 
-#: remove-extra-media.php:330
+#: remove-extra-media.php:334
 msgid "Stopping, please wait a moment."
 msgstr ""
 
-#: remove-extra-media.php:432
+#: remove-extra-media.php:436
 msgid "Failed Processing: %s is incorrect post type."
 msgstr ""
 
-#: remove-extra-media.php:436
+#: remove-extra-media.php:440
 msgid "No"
 msgstr ""
 
-#: remove-extra-media.php:438
-msgid ""
-"&quot;<a href=\"%1$s\" target=\"_blank\">%2$s</a>&quot; Post ID %3$s was "
-"successfully processed in %4$s seconds. <strong>%5$s</strong> extra media "
-"removed."
+#: remove-extra-media.php:442
+msgid "&quot;<a href=\"%1$s\" target=\"_blank\">%2$s</a>&quot; Post ID %3$s was successfully processed in %4$s seconds. <strong>%5$s</strong> extra media removed."
 msgstr ""
 
-#: remove-extra-media.php:489
-msgid ""
-"If your Remove Extra Media display has gone to funky town, please <a href="
-"\"%s\">read the FAQ</a> about possible CSS fixes."
+#: remove-extra-media.php:493
+msgid "If your Remove Extra Media display has gone to funky town, please <a href=\"%s\">read the FAQ</a> about possible CSS fixes."
 msgstr ""
 
-#: remove-extra-media.php:498
-msgid ""
-"Please donate $5 towards development and support of this Remove Extra Media "
-"plugin. %s"
+#: remove-extra-media.php:502
+msgid "Please donate $5 towards development and support of this Remove Extra Media plugin. %s"
+msgstr ""
+#. Plugin Name of the plugin/theme
+msgid "Remove Extra Media"
 msgstr ""
 
 #. Plugin URI of the plugin/theme
 msgid "http://wordpress.org/extend/plugins/remove-extra-media/"
 msgstr ""
 
+#. Description of the plugin/theme
+msgid "Use Remove Extra Media to remove extra media attachments from your selected post types."
+msgstr ""
+
 #. Author of the plugin/theme
-msgid "Michael Cannon"
+msgid "Axelerant"
 msgstr ""
 
 #. Author URI of the plugin/theme
