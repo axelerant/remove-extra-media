@@ -1,6 +1,6 @@
 <?php
 /*
-	Copyright 2015 Axelerant (email: info@axelerant.com)
+	Copyright 2015 Axelerant
 
 	This program is free software; you can redistribute it and/or modify
 	it under the terms of the GNU General Public License, version 2, as
@@ -61,22 +61,24 @@ class Remove_Extra_Media_Settings {
 	public static function init() {}
 
 
-	public static function admin_init() {
-		$version       = rmem_get_option( 'version' );
-		self::$version = Remove_Extra_Media::VERSION;
-		self::$version = apply_filters( 'rmem__version', self::$version );
+		public static function admin_init() {
+			$version       = rmem_get_option( 'version' );
+			self::$version = Remove_Extra_Media::VERSION;
+			self::$version = apply_filters( 'rmem__version', self::$version );
 
-		if ( $version != self::$version )
-			self::initialize_settings();
+			if ( $version != self::$version ) {
+				self::initialize_settings();
+			}
 
-		if ( ! self::do_load() )
-			return;
+			if ( ! self::do_load() ) {
+				return;
+			}
 
-		self::sections();
-		self::settings();
+			self::sections();
+			self::settings();
 
-		self::register_settings();
-	}
+			self::register_settings();
+		}
 
 
 	public static function admin_menu() {
@@ -247,22 +249,25 @@ class Remove_Extra_Media_Settings {
 		);
 
 		$post_types = get_post_types( $args, 'objects' );
-		foreach ( $post_types as $post_type )
+		foreach ( $post_types as $post_type ) {
 			$result[ $post_type->name ] = $post_type->label;
+		}
 
 		return $result;
 	}
 
 
 	public static function get_defaults( $mode = null ) {
-		if ( empty( self::$defaults ) )
+		if ( empty( self::$defaults ) ) {
 			self::settings();
+		}
 
 		$do_backwards = false;
 		if ( 'backwards' == $mode ) {
 			$old_version = rmem_get_option( 'version' );
-			if ( ! empty( $old_version ) )
+			if ( ! empty( $old_version ) ) {
 				$do_backwards = true;
+			}
 		}
 
 		foreach ( self::$settings as $id => $parts ) {
@@ -270,8 +275,9 @@ class Remove_Extra_Media_Settings {
 			if ( $do_backwards ) {
 				$version = ! empty( $parts['backwards']['version'] ) ? $parts['backwards']['version'] : false;
 				if ( ! empty( $version ) ) {
-					if ( $old_version < $version )
+					if ( $old_version < $version ) {
 						$std = $parts['backwards']['std'];
+					}
 				}
 			}
 
@@ -283,8 +289,9 @@ class Remove_Extra_Media_Settings {
 
 
 	public static function get_settings() {
-		if ( empty( self::$settings ) )
+		if ( empty( self::$settings ) ) {
 			self::settings();
+		}
 
 		return self::$settings;
 	}
@@ -298,8 +305,9 @@ class Remove_Extra_Media_Settings {
 	public static function create_setting( $args = array() ) {
 		extract( $args );
 
-		if ( preg_match( '#(_expand_begin|_expand_end)#', $id ) )
+		if ( preg_match( '#(_expand_begin|_expand_end)#', $id ) ) {
 			return;
+		}
 
 		$field_args = array(
 			'type' => $type,
@@ -329,8 +337,9 @@ class Remove_Extra_Media_Settings {
 		echo '<div id="' . self::ID . '">
 			<ul>';
 
-		foreach ( self::$sections as $section_slug => $section )
+		foreach ( self::$sections as $section_slug => $section ) {
 			echo '<li><a href="#' . $section_slug . '">' . $section . '</a></li>';
+		}
 
 		echo '</ul>';
 
@@ -339,28 +348,28 @@ class Remove_Extra_Media_Settings {
 		echo '
 			<p class="submit"><input name="Submit" type="submit" class="button-primary" value="' . esc_html__( 'Save Changes', 'remove-extra-media' ) . '" /></p>
 			</form>
-		</div>
-		';
+			</div>
+			';
 
 		$disable_donate = rmem_get_option( 'disable_donate' );
 		if ( ! $disable_donate ) {
 			echo '<p>' .
 				sprintf(
-				__( 'If you like this plugin, please <a href="%1$s" title="Donate for Good Karma"><img src="%2$s" border="0" alt="Donate for Good Karma" /></a> or <a href="%3$s" title="purchase Remove Extra Media Premium">purchase Remove Extra Media Premium</a> to help fund further development and <a href="%4$s" title="Support forums">support</a>.', 'remove-extra-media' ),
-				esc_url( 'http://axelerant.com/about-axelerant/donate/' ),
-				esc_url( 'https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif' ),
-				esc_url( 'http://axelerant.com/downloads/' ),
-				esc_url( 'https://nodedesk.zendesk.com/hc/en-us/sections/200861112-WordPress-FAQs' )
-			) .
+					__( 'If you like this plugin, please <a href="%1$s" title="Donate for Good Karma"><img src="%2$s" border="0" alt="Donate for Good Karma" /></a> or <a href="%3$s" title="purchase Remove Extra Media Premium">purchase Remove Extra Media Premium</a> to help fund further development and <a href="%4$s" title="Support forums">support</a>.', 'remove-extra-media' ),
+					esc_url( 'http://axelerant.com/about-axelerant/donate/' ),
+					esc_url( 'https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif' ),
+					esc_url( 'http://axelerant.com/downloads/' ),
+					esc_url( 'https://nodedesk.zendesk.com/hc/en-us/sections/200861112-WordPress-FAQs' )
+				) .
 				'</p>';
 		}
 
 		echo '<p class="copyright">' .
 			sprintf(
-			__( 'Copyright &copy;%1$s <a href="%2$s">Axelerant</a>.', 'remove-extra-media' ),
-			date( 'Y' ),
-			esc_url( 'http://axelerant.com' )
-		) .
+				__( 'Copyright &copy;%1$s <a href="%2$s">Axelerant</a>.', 'remove-extra-media' ),
+				date( 'Y' ),
+				esc_url( 'http://axelerant.com' )
+			) .
 			'</p>';
 
 		self::section_scripts();
@@ -371,16 +380,16 @@ class Remove_Extra_Media_Settings {
 
 	public static function section_scripts() {
 		echo '
-<script type="text/javascript">
-	jQuery(document).ready(function($) {
-		$( "#' . self::ID . '" ).tabs();
-		// This will make the "warning" checkbox class really stand out when checked.
-		$(".warning").change(function() {
-			if ($(this).is(":checked"))
-				$(this).parent().css("background", "#c00").css("color", "#fff").css("fontWeight", "bold");
-			else
-				$(this).parent().css("background", "inherit").css("color", "inherit").css("fontWeight", "inherit");
-		});
+			<script type="text/javascript">
+jQuery(document).ready(function($) {
+	$( "#' . self::ID . '" ).tabs();
+	// This will make the "warning" checkbox class really stand out when checked.
+	$(".warning").change(function() {
+		if ($(this).is(":checked"))
+			$(this).parent().css("background", "#c00").css("color", "#fff").css("fontWeight", "bold");
+		else
+			$(this).parent().css("background", "inherit").css("color", "inherit").css("fontWeight", "inherit");
+	});
 	});
 </script>
 ';
@@ -390,15 +399,18 @@ class Remove_Extra_Media_Settings {
 	public static function do_settings_sections( $page ) {
 		global $wp_settings_sections, $wp_settings_fields;
 
-		if ( ! isset( $wp_settings_sections ) || !isset( $wp_settings_sections[$page] ) )
+		if ( ! isset( $wp_settings_sections ) || ! isset( $wp_settings_sections[$page] ) ) {
 			return;
+}
 
 		foreach ( (array) $wp_settings_sections[$page] as $section ) {
-			if ( $section['callback'] )
+			if ( $section['callback'] ) {
 				call_user_func( $section['callback'], $section );
+}
 
-			if ( ! isset( $wp_settings_fields ) || !isset( $wp_settings_fields[$page] ) || !isset( $wp_settings_fields[$page][$section['id']] ) )
+			if ( ! isset( $wp_settings_fields ) || ! isset( $wp_settings_fields[$page] ) || ! isset( $wp_settings_fields[$page][$section['id']] ) ) {
 				continue;
+}
 
 			echo '<table id=' . $section['id'] . ' class="form-table">';
 			do_settings_fields( $page, $section['id'] );
@@ -410,18 +422,19 @@ class Remove_Extra_Media_Settings {
 	public static function display_section() {}
 
 
-	public static function display_about_section() {
-		$text  = __( '<img class="size-medium" src="%5$s" alt="Axelerant 2015 Retreat in Goa" width="640" height="327" /><p>We at Axelerant have transformed ourselves from being a simple Drupal development company into a thriving incubator for products and services related to DevOps, Drupal, ecommerce, project development, release management, WordPress, and 24/7 support. Inside Axelerant, we focus on talent that’s giving, open, passionate, process oriented, and self­directed. Our clients tend to be design agencies, media publishers, and other IT organizations.</p><h2>Vision</h2><p>Axelerant, making happiness possible</p><h2>Mission</h2><p>We’re an incubator for innovative products and services created to make the world a happier place.</p><h2>Core Values</h2><ul><li><b>Passion</b> – Our passion is so strong, we’re self­directed to make the difficult easy.</li><li><b>Openness</b> – We’re so honest and painstaking in our discussions that there are no questions left, and standards are created.</li><li><b>Giving</b> – We’re excited to share our results to inspire all to surpass them.</li></ul><p>Read more about…</p><ul><li><a href="%1$s">Axelerant Team Members</a></li><li><a href="%2$s">Drupal Give</a></li><li><a href="%3$s">How We Work</a></li><li><a href="%4$s">Testimonials</a></li><li><a href="%6$s">Careers</a></li></ul>', 'remove-extra-media' );
+	public function display_about() {
+		$text  = __( '<img class="size-medium" src="%5$s" alt="Axelerant 2015 Retreat in Goa" width="640" height="327" /><p>Axelerant is a full-service software development company that focuses on open-source technologies. Top technical talent who are passionate, giving, and communicative demonstrates our backbone. We provide high-end Strategy, Implementation, and Support services for our clients and agencies with whom we partner.</p><p>Our team members span the world, and we follow agile delivery and working processes. Further, we’re actively giving back to many open-source communities and have fostered an innovative, incubator culture to give ideas a chance to succeed.</p><h2>Foundations of Axelerant</h2><ul><li><b>Passion</b> – Our passion is so strong, we’re self­directed to make the difficult easy.</li><li><b>Openness</b> – We’re so honest and painstaking in our discussions that there are no questions left, and standards are created.</li><li><b>Giving</b> – We’re excited to share our results to inspire all to surpass them.</li></ul><h3>Learn More About Axelerant</h3><ul><li><a href="%1$s">Axelerant Team</a></li><li><a href="%2$s">Giving Back</a></li><li><a href="%7$s">Inside Axelerant</a></li><li><a href="%3$s">Our Services</a></li><li><a href="%4$s">Testimonials</a></li><li><a href="%6$s">Careers</a></li></ul>' );
 
 		echo '<div id="about" style="width: 70%; min-height: 225px;"><p>';
 		echo sprintf(
 			$text,
-			esc_url( '//axelerant.com/about-axelerant/axelerant-team-members/' ),
-			esc_url( '//www.axelerant.com/drupalgive' ),
-			esc_url( '//axelerant.com/about-axelerant/how-we-work/' ),
-			esc_url( '//axelerant.com/about-axelerant/testimonials/' ),
-			esc_url( '//axelerant.com/wp-content/uploads/2015/02/IGP7228-2015-01-22-at-05-18-02.jpg' ),
-			esc_url( '//axelerant.com/careers/' )
+			esc_url( 'https://axelerant.com/about-axelerant/' ),
+			esc_url( 'https://axelerant.com/drupalgive/' ),
+			esc_url( 'https://axelerant.com/services/' ),
+			esc_url( 'https://axelerant.com/about-axelerant/testimonials/' ),
+			esc_url( 'https://axelerant.com/wp-content/uploads/2015/02/IGP7228-2015-01-22-at-05-18-02.jpg' ),
+			esc_url( 'https://axelerant.com/careers/' ),
+			esc_url( 'https://axelerant.com/open-policies-open-discussion/' )
 		);
 		echo '</p></div>';
 	}
@@ -446,8 +459,9 @@ class Remove_Extra_Media_Settings {
 		}
 
 		$field_class = '';
-		if ( ! empty( $class ) )
+		if ( ! empty( $class ) ) {
 			$field_class = ' ' . $class;
+}
 
 		// desc isn't escaped because it's might contain allowed html
 		$choices      = array_map( 'esc_attr', $choices );
@@ -457,99 +471,110 @@ class Remove_Extra_Media_Settings {
 		$std          = esc_attr( $std );
 
 		switch ( $type ) {
-		case 'checkbox':
-			$content .= '<input class="checkbox' . $field_class . '" type="checkbox" id="' . $id . '" name="' . self::ID . '[' . $id . ']" value="1" ' . checked( $options[$id], 1, false ) . ' /> ';
+			case 'checkbox':
+				$content .= '<input class="checkbox' . $field_class . '" type="checkbox" id="' . $id . '" name="' . self::ID . '[' . $id . ']" value="1" ' . checked( $options[$id], 1, false ) . ' /> ';
 
-			if ( ! empty( $desc ) )
+				if ( ! empty( $desc ) ) {
 				$content .= '<label for="' . $id . '"><span class="description">' . $desc . '</span></label>';
+}
 
 			break;
 
-		case 'file':
-			$content .= '<input class="regular-text' . $field_class . '" type="file" id="' . $id . '" name="' . self::ID . '[' . $id . ']" />';
+			case 'file':
+				$content .= '<input class="regular-text' . $field_class . '" type="file" id="' . $id . '" name="' . self::ID . '[' . $id . ']" />';
 
-			if ( ! empty( $desc ) )
+				if ( ! empty( $desc ) ) {
 				$content .= '<br /><span class="description">' . $desc . '</span>';
+}
 
 			break;
 
-		case 'heading':
-			$content .= '</td></tr><tr valign="top"><td colspan="2"><h4>' . $desc . '</h4>';
+			case 'heading':
+				$content .= '</td></tr><tr valign="top"><td colspan="2"><h4>' . $desc . '</h4>';
 			break;
 
-		case 'hidden':
-			$content .= '<input type="hidden" id="' . $id . '" name="' . self::ID . '[' . $id . ']" value="' . $options[$id] . '" />';
+			case 'hidden':
+				$content .= '<input type="hidden" id="' . $id . '" name="' . self::ID . '[' . $id . ']" value="' . $options[$id] . '" />';
 
 			break;
 
-		case 'password':
-			$content .= '<input class="regular-text' . $field_class . '" type="password" id="' . $id . '" name="' . self::ID . '[' . $id . ']" value="' . $options[$id] . '" />';
+			case 'password':
+				$content .= '<input class="regular-text' . $field_class . '" type="password" id="' . $id . '" name="' . self::ID . '[' . $id . ']" value="' . $options[$id] . '" />';
 
-			if ( ! empty( $desc ) )
+				if ( ! empty( $desc ) ) {
 				$content .= '<br /><span class="description">' . $desc . '</span>';
+}
 
 			break;
 
-		case 'radio':
-			$i             = 1;
-			$count_choices = count( $choices );
-			foreach ( $choices as $value => $label ) {
-				$content .= '<input class="radio' . $field_class . '" type="radio" name="' . self::ID . '[' . $id . ']" id="' . $id . $i . '" value="' . $value . '" ' . checked( $options[$id], $value, false ) . '> <label for="' . $id . $i . '">' . $label . '</label>';
+			case 'radio':
+				$i             = 1;
+				$count_choices = count( $choices );
+				foreach ( $choices as $value => $label ) {
+					$content .= '<input class="radio' . $field_class . '" type="radio" name="' . self::ID . '[' . $id . ']" id="' . $id . $i . '" value="' . $value . '" ' . checked( $options[$id], $value, false ) . '> <label for="' . $id . $i . '">' . $label . '</label>';
 
-				if ( $i < $count_choices )
+					if ( $i < $count_choices ) {
 					$content .= '<br />';
+}
 
-				$i++;
-			}
+					$i++;
+				}
 
-			if ( ! empty( $desc ) )
+				if ( ! empty( $desc ) ) {
 				$content .= '<br /><span class="description">' . $desc . '</span>';
+}
 
 			break;
 
-		case 'readonly':
-			$content .= '<input class="regular-text' . $field_class . '" type="text" id="' . $id . '" name="' . self::ID . '[' . $id . ']" value="' . $options[$id] . '" readonly="readonly" />';
+			case 'readonly':
+				$content .= '<input class="regular-text' . $field_class . '" type="text" id="' . $id . '" name="' . self::ID . '[' . $id . ']" value="' . $options[$id] . '" readonly="readonly" />';
 
-			if ( ! empty( $desc ) )
+				if ( ! empty( $desc ) ) {
 				$content .= '<br /><span class="description">' . $desc . '</span>';
+}
 
 			break;
 
-		case 'select':
-			$content .= '<select class="select' . $field_class . '" name="' . self::ID . '[' . $id . ']">';
+			case 'select':
+				$content .= '<select class="select' . $field_class . '" name="' . self::ID . '[' . $id . ']">';
 
-			foreach ( $choices as $value => $label )
+				foreach ( $choices as $value => $label ) {
 				$content .= '<option value="' . $value . '"' . selected( $options[$id], $value, false ) . '>' . $label . '</option>';
+}
 
-			$content .= '</select>';
+				$content .= '</select>';
 
-			if ( ! empty( $desc ) )
+				if ( ! empty( $desc ) ) {
 				$content .= '<br /><span class="description">' . $desc . '</span>';
+}
 
 			break;
 
-		case 'text':
-			$content .= '<input class="regular-text' . $field_class . '" type="text" id="' . $id . '" name="' . self::ID . '[' . $id . ']" placeholder="' . $std . '" value="' . $options[$id] . '" />';
+			case 'text':
+				$content .= '<input class="regular-text' . $field_class . '" type="text" id="' . $id . '" name="' . self::ID . '[' . $id . ']" placeholder="' . $std . '" value="' . $options[$id] . '" />';
 
-			if ( ! empty( $desc ) )
+				if ( ! empty( $desc ) ) {
 				$content .= '<br /><span class="description">' . $desc . '</span>';
+}
 
 			break;
 
-		case 'textarea':
-			$content .= '<textarea class="' . $field_class . '" id="' . $id . '" name="' . self::ID . '[' . $id . ']" placeholder="' . $std . '" rows="5" cols="30">' . wp_htmledit_pre( $options[$id] ) . '</textarea>';
+			case 'textarea':
+				$content .= '<textarea class="' . $field_class . '" id="' . $id . '" name="' . self::ID . '[' . $id . ']" placeholder="' . $std . '" rows="5" cols="30">' . wp_htmledit_pre( $options[$id] ) . '</textarea>';
 
-			if ( ! empty( $desc ) )
+				if ( ! empty( $desc ) ) {
 				$content .= '<br /><span class="description">' . $desc . '</span>';
+}
 
 			break;
 
-		default:
+			default:
 			break;
 		}
 
-		if ( ! $do_echo )
+		if ( ! $do_echo ) {
 			return $content;
+}
 
 		echo $content;
 	}
@@ -570,10 +595,12 @@ class Remove_Extra_Media_Settings {
 		register_setting( self::ID, self::ID, array( __CLASS__, 'validate_settings' ) );
 
 		foreach ( self::$sections as $slug => $title ) {
-			if ( $slug == 'about' )
-				add_settings_section( $slug, $title, array( __CLASS__, 'display_about_section' ), self::ID );
-			else
+			if ( $slug == 'about' ) {
+				add_settings_section( $slug, $title, array( __CLASS__, 'display_about' ), self::ID );
+}
+			else {
 				add_settings_section( $slug, $title, array( __CLASS__, 'display_section' ), self::ID );
+}
 		}
 
 		foreach ( self::$settings as $id => $setting ) {
@@ -618,8 +645,9 @@ class Remove_Extra_Media_Settings {
 					$import       = $input['import'];
 					$unserialized = unserialize( $import );
 					if ( is_array( $unserialized ) ) {
-						foreach ( $unserialized as $id => $std )
+						foreach ( $unserialized as $id => $std ) {
 							$input[$id] = $std;
+}
 					}
 				}
 			}
@@ -629,39 +657,48 @@ class Remove_Extra_Media_Settings {
 			$default     = $parts['std'];
 			$type        = $parts['type'];
 			$validations = ! empty( $parts['validate'] ) ? $parts['validate'] : array();
-			if ( ! empty( $validations ) )
+			if ( ! empty( $validations ) ) {
 				$validations = explode( ',', $validations );
+}
 
 			if ( ! isset( $input[ $id ] ) ) {
-				if ( 'checkbox' != $type )
+				if ( 'checkbox' != $type ) {
 					$input[ $id ] = $default;
-				else
+}
+				else {
 					$input[ $id ] = 0;
+}
 			}
 
-			if ( $default == $input[ $id ] && ! in_array( 'required', $validations ) )
+			if ( $default == $input[ $id ] && ! in_array( 'required', $validations ) ) {
 				continue;
+}
 
 			if ( 'checkbox' == $type ) {
-				if ( self::is_true( $input[ $id ] ) )
+				if ( self::is_true( $input[ $id ] ) ) {
 					$input[ $id ] = 1;
-				else
+}
+				else {
 					$input[ $id ] = 0;
+}
 			} elseif ( in_array( $type, array( 'radio', 'select' ) ) ) {
 				// single choices only
 				$keys = array_keys( $parts['choices'] );
 
 				if ( ! in_array( $input[ $id ], $keys ) ) {
-					if ( self::is_true( $input[ $id ] ) )
+					if ( self::is_true( $input[ $id ] ) ) {
 						$input[ $id ] = 1;
-					else
+}
+					else {
 						$input[ $id ] = 0;
+}
 				}
 			}
 
 			if ( ! empty( $validations ) ) {
-				foreach ( $validations as $validate )
+				foreach ( $validations as $validate ) {
 					self::validators( $validate, $id, $input, $default, $errors );
+}
 			}
 		}
 
@@ -687,96 +724,106 @@ class Remove_Extra_Media_Settings {
 
 	public static function validators( $validate, $id, &$input, $default, &$errors ) {
 		switch ( $validate ) {
-		case 'absint':
-		case 'intval':
-			if ( '' !== $input[ $id ] )
+			case 'absint':
+			case 'intval':
+				if ( '' !== $input[ $id ] ) {
 				$input[ $id ] = $validate( $input[ $id ] );
-			else
+}
+				else {
 				$input[ $id ] = $default;
+}
 			break;
 
-		case 'ids':
-			$input[ $id ] = self::validate_ids( $input[ $id ], $default );
+			case 'ids':
+				$input[ $id ] = self::validate_ids( $input[ $id ], $default );
 			break;
 
-		case 'min1':
-			$input[ $id ] = intval( $input[ $id ] );
-			if ( 0 >= $input[ $id ] )
+			case 'min1':
+				$input[ $id ] = intval( $input[ $id ] );
+				if ( 0 >= $input[ $id ] ) {
 				$input[ $id ] = $default;
+}
 			break;
 
-		case 'nozero':
-			$input[ $id ] = intval( $input[ $id ] );
-			if ( 0 === $input[ $id ] )
+			case 'nozero':
+				$input[ $id ] = intval( $input[ $id ] );
+				if ( 0 === $input[ $id ] ) {
 				$input[ $id ] = $default;
+}
 			break;
 
-		case 'order':
-			$input[ $id ] = self::validate_order( $input[ $id ], $default );
+			case 'order':
+				$input[ $id ] = self::validate_order( $input[ $id ], $default );
 			break;
 
-		case 'required':
-			if ( empty( $input[ $id ] ) )
+			case 'required':
+				if ( empty( $input[ $id ] ) ) {
 				$errors[ $id ] = esc_html__( 'Required', 'remove-extra-media' );
+}
 			break;
 
-		case 'slug':
-			$input[ $id ] = self::validate_slug( $input[ $id ], $default );
-			$input[ $id ] = strtolower( $input[ $id ] );
+			case 'slug':
+				$input[ $id ] = self::validate_slug( $input[ $id ], $default );
+				$input[ $id ] = strtolower( $input[ $id ] );
 			break;
 
-		case 'slugs':
-			$input[ $id ] = self::validate_slugs( $input[ $id ], $default );
-			$input[ $id ] = strtolower( $input[ $id ] );
+			case 'slugs':
+				$input[ $id ] = self::validate_slugs( $input[ $id ], $default );
+				$input[ $id ] = strtolower( $input[ $id ] );
 			break;
 
-		case 'term':
-			$input[ $id ] = self::validate_term( $input[ $id ], $default );
-			$input[ $id ] = strtolower( $input[ $id ] );
+			case 'term':
+				$input[ $id ] = self::validate_term( $input[ $id ], $default );
+				$input[ $id ] = strtolower( $input[ $id ] );
 			break;
 
-		default:
-			$input[ $id ] = $validate( $input[ $id ] );
+			default:
+				$input[ $id ] = $validate( $input[ $id ] );
 			break;
 		}
 	}
 
 
 	public static function validate_ids( $input, $default ) {
-		if ( preg_match( '#^\d+(,\s?\d+)*$#', $input ) )
+		if ( preg_match( '#^\d+(,\s?\d+)*$#', $input ) ) {
 			return preg_replace( '#\s#', '', $input );
+}
 
 		return $default;
 	}
 
 
 	public static function validate_order( $input, $default ) {
-		if ( preg_match( '#^desc|asc$#i', $input ) )
+		if ( preg_match( '#^desc|asc$#i', $input ) ) {
 			return $input;
+}
 
 		return $default;
 	}
 
 
 	public static function validate_slugs( $input, $default ) {
-		if ( preg_match( '#^[\w-]+(,\s?[\w-]+)*$#', $input ) )
+		if ( preg_match( '#^[\w-]+(,\s?[\w-]+)*$#', $input ) ) {
 			return preg_replace( '#\s#', '', $input );
+}
 
 		return $default;
 	}
 
 
 	public static function validate_slug( $input, $default ) {
-		if ( preg_match( '#^[\w-]+$#', $input ) )
+		if ( preg_match( '#^[\w-]+$#', $input ) ) {
 			return $input;
+}
 
 		return $default;
 	}
 
 
 	public static function validate_term( $input, $default ) {
-		if ( preg_match( '#^\w+$#', $input ) )
+		if ( preg_match( '#^\w+$#', $input ) ) {
 			return $input;
+}
 
 		return $default;
 	}
@@ -787,23 +834,28 @@ class Remove_Extra_Media_Settings {
 	 */
 	public static function is_true( $value = null, $return_boolean = true ) {
 		if ( true === $value || 'true' == strtolower( $value ) || 1 == $value || 'yes' == strtolower( $value ) ) {
-			if ( $return_boolean )
+			if ( $return_boolean ) {
 				return true;
-			else
+}
+			else {
 				return 1;
+}
 		} else {
-			if ( $return_boolean )
+			if ( $return_boolean ) {
 				return false;
-			else
+}
+			else {
 				return 0;
+}
 		}
 	}
 
 
 	public static function settings_add_help_tabs() {
 		$screen = get_current_screen();
-		if ( self::$admin_page != $screen->id )
+		if ( self::$admin_page != $screen->id ) {
 			return;
+}
 
 		$screen->set_help_sidebar(
 			'<p><strong>' . esc_html__( 'For more information:', 'remove-extra-media' ) . '</strong></p><p>' .
@@ -846,18 +898,21 @@ function rmem_get_options() {
 function rmem_get_option( $option, $default = null ) {
 	$options = get_option( Remove_Extra_Media_Settings::ID, null );
 
-	if ( isset( $options[$option] ) )
+	if ( isset( $options[$option] ) ) {
 		return $options[$option];
-	else
+}
+	else {
 		return $default;
+}
 }
 
 
 function rmem_set_option( $option, $value = null ) {
 	$options = get_option( Remove_Extra_Media_Settings::ID );
 
-	if ( ! is_array( $options ) )
+	if ( ! is_array( $options ) ) {
 		$options = array();
+}
 
 	$options[$option] = $value;
 	update_option( Remove_Extra_Media_Settings::ID, $options );

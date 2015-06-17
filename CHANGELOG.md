@@ -1,6 +1,8 @@
 # CHANGELOG - Remove Extra Media
 
 ## 1.1.1RC1
+* Coding standard updates
+* Update store branding
 
 ## 1.1.0
 * Change branding from Aihrus to Axelerant

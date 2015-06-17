@@ -5,7 +5,7 @@
  * Description: Use Remove Extra Media to remove extra media attachments from your selected post types.
  * Version: 1.1.1RC1
  * Author: Axelerant
- * Author URI: http://axelerant.com/
+ * Author URI: https://axelerant.com/
  * License: GPLv2 or later
  * Text Domain: remove-extra-media
  * Domain Path: /languages
@@ -13,7 +13,7 @@
 
 
 /**
- * Copyright 2015 Axelerant (email: info@axelerant.com)
+ * Copyright 2015 Axelerant
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License, version 2, as
  * published by the Free Software Foundation.
@@ -101,20 +101,23 @@ EOD;
 
 
 	public static function activation() {
-		if ( ! current_user_can( 'activate_plugins' ) )
+		if ( ! current_user_can( 'activate_plugins' ) ) {
 			return;
+		}
 	}
 
 
 	public static function deactivation() {
-		if ( ! current_user_can( 'activate_plugins' ) )
+		if ( ! current_user_can( 'activate_plugins' ) ) {
 			return;
+		}
 	}
 
 
 	public static function uninstall() {
-		if ( ! current_user_can( 'activate_plugins' ) )
+		if ( ! current_user_can( 'activate_plugins' ) ) {
 			return;
+		}
 
 		global $wpdb;
 
@@ -129,16 +132,17 @@ EOD;
 
 
 	public static function plugin_row_meta( $input, $file ) {
-		if ( $file != self::$base )
+		if ( $file != self::$base ) {
 			return $input;
+		}
 
 		$disable_donate = rmem_get_option( 'disable_donate' );
-		if ( $disable_donate )
+		if ( $disable_donate ) {
 			return $input;
+		}
 
 		$links = array(
-			'<a href="http://axelerant.com/about-axelerant/donate/"><img src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" alt="PayPal - The safer, easier way to pay online!" /></a>',
-			'<a href="http://axelerant.com/downloads/remove-extra-media-premium-wordpress-plugin/">Purchase Remove Extra Media Premium</a>',
+			'<a href="https://axelerant.com/about-axelerant/donate/"><img src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" alt="PayPal - The safer, easier way to pay online!" /></a>',
 		);
 
 		$input = array_merge( $input, $links );
@@ -161,8 +165,9 @@ EOD;
 	 */
 	public static function user_interface() {
 		// Capability check
-		if ( ! current_user_can( 'manage_options' ) )
+		if ( ! current_user_can( 'manage_options' ) ) {
 			wp_die( self::$post_id, esc_html__( "Your user account doesn't have permission to access this.", 'remove-extra-media' ) );
+		}
 
 ?>
 
@@ -226,21 +231,25 @@ EOD;
 		);
 
 		$include_ids = rmem_get_option( 'posts_to_import' );
-		if ( $include_ids )
-			$query[ 'post__in' ] = str_getcsv( $include_ids );
+		if ( $include_ids ) {
+			$query['post__in'] = str_getcsv( $include_ids );
+		}
 
 		$skip_ids = rmem_get_option( 'skip_importing_post_ids' );
-		if ( $skip_ids )
-			$query[ 'post__not_in' ] = str_getcsv( $skip_ids );
+		if ( $skip_ids ) {
+			$query['post__not_in'] = str_getcsv( $skip_ids );
+		}
 
 		$results  = new WP_Query( $query );
 		$query_wp = $results->request;
 
 		$limit = rmem_get_option( 'limit' );
-		if ( $limit )
+		if ( $limit ) {
 			$query_wp = preg_replace( '#\bLIMIT 0,.*#', 'LIMIT 0,' . $limit, $query_wp );
-		else
+		}
+		else {
 			$query_wp = preg_replace( '#\bLIMIT 0,.*#', '', $query_wp );
+		}
 
 		$posts = $wpdb->get_col( $query_wp );
 
@@ -307,8 +316,8 @@ EOD;
 		<li style="display:none"></li>
 	</ol>
 
-	<script type="text/javascript">
-	// <![CDATA[
+		<script type="text/javascript">
+		// <![CDATA[
 		jQuery(document).ready(function($){
 			var i;
 			var rt_posts = [<?php echo esc_attr( $posts ); ?>];
@@ -377,43 +386,43 @@ EOD;
 			function WPSPosts( id ) {
 				$.ajax({
 					type: 'POST',
-					url: ajaxurl,
-					data: {
-						action: "ajax_process_post",
-						id: id
-					},
-					success: function( response ) {
-						if ( response.success ) {
-							WPSPostsUpdateStatus( id, true, response );
-						}
-						else {
-							WPSPostsUpdateStatus( id, false, response );
-						}
+						url: ajaxurl,
+						data: {
+							action: "ajax_process_post",
+								id: id
+						},
+						success: function( response ) {
+							if ( response.success ) {
+								WPSPostsUpdateStatus( id, true, response );
+							}
+							else {
+								WPSPostsUpdateStatus( id, false, response );
+							}
 
-						if ( rt_posts.length && rt_continue ) {
-							WPSPosts( rt_posts.shift() );
-						}
-						else {
-							WPSPostsFinishUp();
-						}
-					},
-					error: function( response ) {
-						WPSPostsUpdateStatus( id, false, response );
+							if ( rt_posts.length && rt_continue ) {
+								WPSPosts( rt_posts.shift() );
+							}
+							else {
+								WPSPostsFinishUp();
+							}
+						},
+							error: function( response ) {
+								WPSPostsUpdateStatus( id, false, response );
 
-						if ( rt_posts.length && rt_continue ) {
-							WPSPosts( rt_posts.shift() );
-						}
-						else {
-							WPSPostsFinishUp();
-						}
-					}
+								if ( rt_posts.length && rt_continue ) {
+									WPSPosts( rt_posts.shift() );
+								}
+								else {
+									WPSPostsFinishUp();
+								}
+							}
 				});
 			}
 
 			WPSPosts( rt_posts.shift() );
 		});
-	// ]]>
-	</script>
+		// ]]>
+		</script>
 <?php
 	}
 
@@ -432,12 +441,14 @@ EOD;
 		}
 
 		$post = get_post( self::$post_id );
-		if ( ! $post || ! in_array( $post->post_type, self::$post_types )  )
+		if ( ! $post || ! in_array( $post->post_type, self::$post_types )  ) {
 			die( json_encode( array( 'error' => sprintf( esc_html__( 'Failed Processing: %s is incorrect post type.', 'remove-extra-media' ), esc_html( self::$post_id ) ) ) ) );
+		}
 
 		$count_removed = self::do_remove_extra_media( self::$post_id, $post );
-		if ( empty( $count_removed ) )
+		if ( empty( $count_removed ) ) {
 			$count_removed = __( 'No', 'remove-extra-media' );
+		}
 
 		die( json_encode( array( 'success' => sprintf( __( '&quot;<a href="%1$s" target="_blank">%2$s</a>&quot; Post ID %3$s was successfully processed in %4$s seconds. <strong>%5$s</strong> extra media removed.', 'remove-extra-media' ), get_permalink( self::$post_id ), esc_html( get_the_title( self::$post_id ) ), self::$post_id, timer_stop(), $count_removed ) ) ) );
 	}
@@ -458,8 +469,9 @@ EOD;
 
 		$medias       = $wpdb->get_col( $query );
 		$count_medias = count( $medias );
-		if ( $media_limit >= $count_medias )
+		if ( $media_limit >= $count_medias ) {
 			return;
+		}
 
 		$featured_key = array_search( $featured_id, $medias );
 		if ( $featured_key ) {
@@ -475,8 +487,9 @@ EOD;
 				);
 				wp_update_post( $args );
 
-				if ( $featured_id == $media_id )
+				if ( $featured_id == $media_id ) {
 					delete_post_meta( $post_id, '_thumbnail_id' );
+				}
 			}
 
 			$media_count++;
@@ -509,8 +522,9 @@ EOD;
 	public static function update() {
 		$prior_version = rmem_get_option( 'admin_notices' );
 		if ( $prior_version ) {
-			if ( $prior_version < '0.0.1' )
+			if ( $prior_version < '0.0.1' ) {
 				add_action( 'admin_notices', array( __CLASS__, 'admin_notices_0_0_1' ) );
+			}
 
 			rmem_set_option( 'admin_notices' );
 		}
@@ -558,23 +572,27 @@ add_action( 'plugins_loaded', 'rmem__init', 99 );
  * @SuppressWarnings(PHPMD.UnusedLocalVariable)
  */
 function rmem__init() {
-	if ( ! is_admin() )
+	if ( ! is_admin() ) {
 		return;
+	}
 
-	if ( ! function_exists( 'add_screen_meta_link' ) )
+	if ( ! function_exists( 'add_screen_meta_link' ) ) {
 		require_once 'lib/screen-meta-links.php';
+	}
 
 	require_once ABSPATH . 'wp-admin/includes/plugin.php';
 	if ( is_plugin_active( Remove_Extra_Media::PLUGIN_FILE ) ) {
 		require_once 'lib/class-remove-extra-media-settings.php';
 
 		global $Remove_Extra_Media;
-		if ( is_null( $Remove_Extra_Media ) )
+		if ( is_null( $Remove_Extra_Media ) ) {
 			$Remove_Extra_Media = new Remove_Extra_Media();
+		}
 
 		global $Remove_Extra_Media_Settings;
-		if ( is_null( $Remove_Extra_Media_Settings ) )
+		if ( is_null( $Remove_Extra_Media_Settings ) ) {
 			$Remove_Extra_Media_Settings = new Remove_Extra_Media_Settings();
+		}
 	}
 }
 
