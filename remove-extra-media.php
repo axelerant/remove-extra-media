@@ -178,42 +178,42 @@ EOD;
 	<h2><?php _e( 'Remove Extra Media Processer', 'remove-extra-media' ); ?></h2>
 
 <?php
-		if ( rmem_get_option( 'debug_mode' ) ) {
-			$posts_to_import = rmem_get_option( 'posts_to_import' );
-			$posts_to_import = explode( ',', $posts_to_import );
-			foreach ( $posts_to_import as $post_id ) {
-				self::$post_id = $post_id;
-				self::ajax_process_post();
-			}
+if ( rmem_get_option( 'debug_mode' ) ) {
+	$posts_to_import = rmem_get_option( 'posts_to_import' );
+	$posts_to_import = explode( ',', $posts_to_import );
+	foreach ( $posts_to_import as $post_id ) {
+		self::$post_id = $post_id;
+		self::ajax_process_post();
+	}
 
-			exit( __LINE__ . ':' . basename( __FILE__ ) . " DONE<br />\n" );
-		}
+	exit( __LINE__ . ':' . basename( __FILE__ ) . " DONE<br />\n" );
+}
 
 		// If the button was clicked
-		if ( ! empty( $_POST[ self::ID ] ) || ! empty( $_REQUEST['posts'] ) ) {
-			// Form nonce check
-			check_admin_referer( self::ID );
+if ( ! empty( $_POST[ self::ID ] ) || ! empty( $_REQUEST['posts'] ) ) {
+	// Form nonce check
+	check_admin_referer( self::ID );
 
-			// Create the list of image IDs
-			if ( ! empty( $_REQUEST['posts'] ) ) {
-				$posts = explode( ',', trim( $_REQUEST['posts'], ',' ) );
-				$posts = array_map( 'intval', $posts );
-			} else {
-				$posts = self::get_posts_to_process();
-			}
+	// Create the list of image IDs
+	if ( ! empty( $_REQUEST['posts'] ) ) {
+		$posts = explode( ',', trim( $_REQUEST['posts'], ',' ) );
+		$posts = array_map( 'intval', $posts );
+	} else {
+		$posts = self::get_posts_to_process();
+	}
 
-			$count = count( $posts );
-			if ( ! $count ) {
-				echo '	<p>' . _e( 'All done. No posts needing processing found.', 'remove-extra-media' ) . '</p></div>';
-				return;
-			}
+	$count = count( $posts );
+	if ( ! $count ) {
+		echo '	<p>' . _e( 'All done. No posts needing processing found.', 'remove-extra-media' ) . '</p></div>';
+		return;
+	}
 
-			$posts = implode( ',', $posts );
-			self::show_status( $count, $posts );
-		} else {
-			// No button click? Display the form.
-			self::show_greeting();
-		}
+	$posts = implode( ',', $posts );
+	self::show_status( $count, $posts );
+} else {
+	// No button click? Display the form.
+	self::show_greeting();
+}
 ?>
 	</div>
 <?php

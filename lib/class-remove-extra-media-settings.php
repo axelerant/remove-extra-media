@@ -66,13 +66,13 @@ class Remove_Extra_Media_Settings {
 			self::$version = Remove_Extra_Media::VERSION;
 			self::$version = apply_filters( 'rmem__version', self::$version );
 
-			if ( $version != self::$version ) {
-				self::initialize_settings();
-			}
+		if ( $version != self::$version ) {
+			self::initialize_settings();
+		}
 
-			if ( ! self::do_load() ) {
-				return;
-			}
+		if ( ! self::do_load() ) {
+			return;
+		}
 
 			self::sections();
 			self::settings();
@@ -401,16 +401,16 @@ jQuery(document).ready(function($) {
 
 		if ( ! isset( $wp_settings_sections ) || ! isset( $wp_settings_sections[$page] ) ) {
 			return;
-}
+		}
 
 		foreach ( (array) $wp_settings_sections[$page] as $section ) {
 			if ( $section['callback'] ) {
 				call_user_func( $section['callback'], $section );
-}
+			}
 
 			if ( ! isset( $wp_settings_fields ) || ! isset( $wp_settings_fields[$page] ) || ! isset( $wp_settings_fields[$page][$section['id']] ) ) {
 				continue;
-}
+			}
 
 			echo '<table id=' . $section['id'] . ' class="form-table">';
 			do_settings_fields( $page, $section['id'] );
@@ -461,7 +461,7 @@ jQuery(document).ready(function($) {
 		$field_class = '';
 		if ( ! empty( $class ) ) {
 			$field_class = ' ' . $class;
-}
+		}
 
 		// desc isn't escaped because it's might contain allowed html
 		$choices      = array_map( 'esc_attr', $choices );
@@ -476,7 +476,7 @@ jQuery(document).ready(function($) {
 
 				if ( ! empty( $desc ) ) {
 				$content .= '<label for="' . $id . '"><span class="description">' . $desc . '</span></label>';
-}
+				}
 
 			break;
 
@@ -485,7 +485,7 @@ jQuery(document).ready(function($) {
 
 				if ( ! empty( $desc ) ) {
 				$content .= '<br /><span class="description">' . $desc . '</span>';
-}
+				}
 
 			break;
 
@@ -503,7 +503,7 @@ jQuery(document).ready(function($) {
 
 				if ( ! empty( $desc ) ) {
 				$content .= '<br /><span class="description">' . $desc . '</span>';
-}
+				}
 
 			break;
 
@@ -515,14 +515,14 @@ jQuery(document).ready(function($) {
 
 					if ( $i < $count_choices ) {
 					$content .= '<br />';
-}
+					}
 
 					$i++;
 				}
 
 				if ( ! empty( $desc ) ) {
 				$content .= '<br /><span class="description">' . $desc . '</span>';
-}
+				}
 
 			break;
 
@@ -531,7 +531,7 @@ jQuery(document).ready(function($) {
 
 				if ( ! empty( $desc ) ) {
 				$content .= '<br /><span class="description">' . $desc . '</span>';
-}
+				}
 
 			break;
 
@@ -540,13 +540,13 @@ jQuery(document).ready(function($) {
 
 				foreach ( $choices as $value => $label ) {
 				$content .= '<option value="' . $value . '"' . selected( $options[$id], $value, false ) . '>' . $label . '</option>';
-}
+				}
 
 				$content .= '</select>';
 
 				if ( ! empty( $desc ) ) {
 				$content .= '<br /><span class="description">' . $desc . '</span>';
-}
+				}
 
 			break;
 
@@ -555,7 +555,7 @@ jQuery(document).ready(function($) {
 
 				if ( ! empty( $desc ) ) {
 				$content .= '<br /><span class="description">' . $desc . '</span>';
-}
+				}
 
 			break;
 
@@ -564,7 +564,7 @@ jQuery(document).ready(function($) {
 
 				if ( ! empty( $desc ) ) {
 				$content .= '<br /><span class="description">' . $desc . '</span>';
-}
+				}
 
 			break;
 
@@ -574,7 +574,7 @@ jQuery(document).ready(function($) {
 
 		if ( ! $do_echo ) {
 			return $content;
-}
+		}
 
 		echo $content;
 	}
@@ -597,10 +597,10 @@ jQuery(document).ready(function($) {
 		foreach ( self::$sections as $slug => $title ) {
 			if ( $slug == 'about' ) {
 				add_settings_section( $slug, $title, array( __CLASS__, 'display_about' ), self::ID );
-}
+			}
 			else {
 				add_settings_section( $slug, $title, array( __CLASS__, 'display_section' ), self::ID );
-}
+			}
 		}
 
 		foreach ( self::$settings as $id => $setting ) {
@@ -647,7 +647,7 @@ jQuery(document).ready(function($) {
 					if ( is_array( $unserialized ) ) {
 						foreach ( $unserialized as $id => $std ) {
 							$input[$id] = $std;
-}
+						}
 					}
 				}
 			}
@@ -659,28 +659,28 @@ jQuery(document).ready(function($) {
 			$validations = ! empty( $parts['validate'] ) ? $parts['validate'] : array();
 			if ( ! empty( $validations ) ) {
 				$validations = explode( ',', $validations );
-}
+			}
 
 			if ( ! isset( $input[ $id ] ) ) {
 				if ( 'checkbox' != $type ) {
 					$input[ $id ] = $default;
-}
+				}
 				else {
 					$input[ $id ] = 0;
-}
+				}
 			}
 
 			if ( $default == $input[ $id ] && ! in_array( 'required', $validations ) ) {
 				continue;
-}
+			}
 
 			if ( 'checkbox' == $type ) {
 				if ( self::is_true( $input[ $id ] ) ) {
 					$input[ $id ] = 1;
-}
+				}
 				else {
 					$input[ $id ] = 0;
-}
+				}
 			} elseif ( in_array( $type, array( 'radio', 'select' ) ) ) {
 				// single choices only
 				$keys = array_keys( $parts['choices'] );
@@ -688,17 +688,17 @@ jQuery(document).ready(function($) {
 				if ( ! in_array( $input[ $id ], $keys ) ) {
 					if ( self::is_true( $input[ $id ] ) ) {
 						$input[ $id ] = 1;
-}
+					}
 					else {
 						$input[ $id ] = 0;
-}
+					}
 				}
 			}
 
 			if ( ! empty( $validations ) ) {
 				foreach ( $validations as $validate ) {
 					self::validators( $validate, $id, $input, $default, $errors );
-}
+				}
 			}
 		}
 
@@ -728,10 +728,10 @@ jQuery(document).ready(function($) {
 			case 'intval':
 				if ( '' !== $input[ $id ] ) {
 				$input[ $id ] = $validate( $input[ $id ] );
-}
+				}
 				else {
 				$input[ $id ] = $default;
-}
+				}
 			break;
 
 			case 'ids':
@@ -742,14 +742,14 @@ jQuery(document).ready(function($) {
 				$input[ $id ] = intval( $input[ $id ] );
 				if ( 0 >= $input[ $id ] ) {
 				$input[ $id ] = $default;
-}
+				}
 			break;
 
 			case 'nozero':
 				$input[ $id ] = intval( $input[ $id ] );
 				if ( 0 === $input[ $id ] ) {
 				$input[ $id ] = $default;
-}
+				}
 			break;
 
 			case 'order':
@@ -759,7 +759,7 @@ jQuery(document).ready(function($) {
 			case 'required':
 				if ( empty( $input[ $id ] ) ) {
 				$errors[ $id ] = esc_html__( 'Required', 'remove-extra-media' );
-}
+				}
 			break;
 
 			case 'slug':
@@ -787,7 +787,7 @@ jQuery(document).ready(function($) {
 	public static function validate_ids( $input, $default ) {
 		if ( preg_match( '#^\d+(,\s?\d+)*$#', $input ) ) {
 			return preg_replace( '#\s#', '', $input );
-}
+		}
 
 		return $default;
 	}
@@ -796,7 +796,7 @@ jQuery(document).ready(function($) {
 	public static function validate_order( $input, $default ) {
 		if ( preg_match( '#^desc|asc$#i', $input ) ) {
 			return $input;
-}
+		}
 
 		return $default;
 	}
@@ -805,7 +805,7 @@ jQuery(document).ready(function($) {
 	public static function validate_slugs( $input, $default ) {
 		if ( preg_match( '#^[\w-]+(,\s?[\w-]+)*$#', $input ) ) {
 			return preg_replace( '#\s#', '', $input );
-}
+		}
 
 		return $default;
 	}
@@ -814,7 +814,7 @@ jQuery(document).ready(function($) {
 	public static function validate_slug( $input, $default ) {
 		if ( preg_match( '#^[\w-]+$#', $input ) ) {
 			return $input;
-}
+		}
 
 		return $default;
 	}
@@ -823,7 +823,7 @@ jQuery(document).ready(function($) {
 	public static function validate_term( $input, $default ) {
 		if ( preg_match( '#^\w+$#', $input ) ) {
 			return $input;
-}
+		}
 
 		return $default;
 	}
@@ -836,17 +836,17 @@ jQuery(document).ready(function($) {
 		if ( true === $value || 'true' == strtolower( $value ) || 1 == $value || 'yes' == strtolower( $value ) ) {
 			if ( $return_boolean ) {
 				return true;
-}
+			}
 			else {
 				return 1;
-}
+			}
 		} else {
 			if ( $return_boolean ) {
 				return false;
-}
+			}
 			else {
 				return 0;
-}
+			}
 		}
 	}
 
@@ -855,7 +855,7 @@ jQuery(document).ready(function($) {
 		$screen = get_current_screen();
 		if ( self::$admin_page != $screen->id ) {
 			return;
-}
+		}
 
 		$screen->set_help_sidebar(
 			'<p><strong>' . esc_html__( 'For more information:', 'remove-extra-media' ) . '</strong></p><p>' .
@@ -900,10 +900,10 @@ function rmem_get_option( $option, $default = null ) {
 
 	if ( isset( $options[$option] ) ) {
 		return $options[$option];
-}
+	}
 	else {
 		return $default;
-}
+	}
 }
 
 
@@ -912,7 +912,7 @@ function rmem_set_option( $option, $value = null ) {
 
 	if ( ! is_array( $options ) ) {
 		$options = array();
-}
+	}
 
 	$options[$option] = $value;
 	update_option( Remove_Extra_Media_Settings::ID, $options );
