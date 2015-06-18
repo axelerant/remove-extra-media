@@ -1,6 +1,6 @@
 # CHANGELOG - Remove Extra Media
 
-## 1.1.1RC1
+## 1.1.1
 * Coding standard updates
 * Update store branding
 
