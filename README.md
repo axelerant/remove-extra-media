@@ -1,7 +1,5 @@
 # README - Remove Extra Media
 
-[![ProjectStatus](http://stillmaintained.com/michael-cannon/remove-extra-media.png)](http://stillmaintained.com/michael-cannon/remove-extra-media)
-
 ## Welcome to the Remove Extra Media Github repository
 
 Remove Extra Media plugin allows you to add custom fields to the edit screen bulk and quick edit panels.

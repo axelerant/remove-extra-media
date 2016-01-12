@@ -1,5 +1,8 @@
 # CHANGELOG - Remove Extra Media
 
+## 1.1.2RC1
+* Remove ProjectStatus icon
+
 ## 1.1.1
 * Coding standard updates
 * Update store branding
